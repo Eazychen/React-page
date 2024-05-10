@@ -17,8 +17,8 @@ const UlGroup = ()=>{
 
 const HomePage = () => {
 	return (
-		<div className="grid grid-cols-[20%_80%] p-8  ">
-			<div className="p-4 text-2xl text-center">Title</div>
+		<div className="grid grid-cols-[20%_80%] p-6 bg-white-alpha-50 fixed top-0 left-0 right-0">
+			<div className="p-4 text-4xl text-center">Title</div>
 			<UlGroup />
 		</div>
 	);
