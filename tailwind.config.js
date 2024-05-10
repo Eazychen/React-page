@@ -5,6 +5,7 @@ module.exports = {
 		extend: {
 			backgroundColor: {
 				'white-alpha-50': 'rgba(255, 255, 255, 0.5)',
+				'sand-color':'#dfd3c3'
 			}
 		},
 	},

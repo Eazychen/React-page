@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .nav-li-group{
-    @apply p-3 text-xl  cursor-pointer
+    @apply p-3 text-xl  cursor-pointer 
+}
+
+.nav-li-group:hover{
+    @apply bg-sand-color rounded-md delay-300 -translate-y-2 
 }
