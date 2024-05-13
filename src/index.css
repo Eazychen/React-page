@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.nav{
+    @apply grid grid-cols-[20%_80%] p-6 bg-white-alpha-50 top-0 left-0 right-0
+}
+.nav-ul{
+    @apply flex items-center ml-auto
+}
+
 .nav-li-group{
     @apply p-3 text-xl  cursor-pointer 
 }
 
 .nav-li-group:hover{
     @apply bg-sand-color rounded-md delay-300 -translate-y-2 
+}
+
+.footer{
+    @apply grid grid-cols-4 px-6 mx-20 py-12
 }
