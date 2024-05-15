@@ -2,40 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav{
-    @apply grid grid-cols-[20%_80%] p-6 bg-white-alpha-50 top-0 left-0 right-0
+.nav {
+  @apply left-0 right-0 top-0 grid grid-cols-[20%_80%] bg-white-alpha-50 p-6;
 }
-.nav-ul{
-    @apply flex items-center ml-auto
-}
-
-.nav-li-group{
-    @apply p-3 text-xl cursor-pointer 
+.nav-ul {
+  @apply ml-auto flex items-center;
 }
 
-.nav-li-group:hover{
-    @apply bg-sand-color rounded-md delay-300 -translate-y-2 
+.nav-li-group {
+  @apply cursor-pointer p-3 text-xl;
 }
 
-.footer{
-    @apply grid grid-cols-4 px-6 mx-52 py-12 
+.nav-li-group:hover {
+  @apply -translate-y-2 rounded-md bg-sand-color delay-300;
 }
-.footer-first-li{
-    @apply bg-gray-500 p-2 rounded-3xl mx-2
+
+.footer {
+  @apply mx-52 grid grid-cols-4 px-6 py-12;
 }
-.footer-li:not(:first-child){
-    @apply mt-1
+.footer-first-li {
+  @apply mx-2 rounded-3xl bg-gray-500 p-2;
 }
-.footer-input{
-    @apply w-full h-10 my-2 border-2 rounded-md border-gray-400
+.footer-first-li :hover {
+  @apply opacity-80;
+}
+.footer-li:not(:first-child) {
+  @apply mt-1;
+}
+.footer-input {
+  @apply my-2 h-10 w-full rounded-md border-2 border-gray-400;
 }
 .footer-input:focus,
-.footer-input:hover{
-    @apply border-black
+.footer-input:hover {
+  @apply border-black;
 }
-.btn-dangrous{
-    @apply px-1 py-2 bg-red-500 rounded-md text-white cursor-pointer
+.btn-dangerous {
+  @apply cursor-pointer rounded-md bg-red-500 px-1 py-2 text-white;
 }
-.btn-dangrous:hover{
-    @apply bg-red-900
+.btn-dangrous:hover {
+  @apply bg-red-900;
 }
