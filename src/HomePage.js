@@ -50,7 +50,7 @@ const HomePage = () => {
 						<button type="button" className="btn-dangrous">訂閱</button>
 					</div>
 				</div>
-				<p className="px-6 mx-20 text-center ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, iste.</p>
+				<p className="px-6 mx-20 text-center ">&copy; 2023-2024 Eazy. All rights reserved.</p>
 			</footer>
 		</div>
 	);
