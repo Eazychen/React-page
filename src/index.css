@@ -10,7 +10,7 @@
 }
 
 .nav-li-group{
-    @apply p-3 text-xl  cursor-pointer 
+    @apply p-3 text-xl cursor-pointer 
 }
 
 .nav-li-group:hover{
@@ -18,5 +18,24 @@
 }
 
 .footer{
-    @apply grid grid-cols-4 px-6 mx-20 py-12
+    @apply grid grid-cols-4 px-6 mx-52 py-12 
+}
+.footer-first-li{
+    @apply bg-gray-500 p-2 rounded-3xl mx-2
+}
+.footer-li:not(:first-child){
+    @apply mt-1
+}
+.footer-input{
+    @apply w-full h-10 my-2 border-2 rounded-md border-gray-400
+}
+.footer-input:focus,
+.footer-input:hover{
+    @apply border-black
+}
+.btn-dangrous{
+    @apply px-1 py-2 bg-red-500 rounded-md text-white cursor-pointer
+}
+.btn-dangrous:hover{
+    @apply bg-red-900
 }
