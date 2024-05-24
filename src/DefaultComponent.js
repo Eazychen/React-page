@@ -1,13 +1,11 @@
 import React from "react";
-import HomePage from "./HomePage";
 
-const DefaultComponent = () => {
-
-	return (
-		<div>
-			<HomePage/>
-		</div>
-	);
+const DefaultComponent = ({ Component }) => {
+  return (
+    <div>
+      <Component />
+    </div>
+  );
 };
 
 export default DefaultComponent;

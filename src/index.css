@@ -18,16 +18,17 @@
 }
 
 .footer {
-  @apply mx-52 grid grid-cols-4 px-6 py-12;
+  @apply grid grid-cols-4 py-12;
+}
+
+.footer-li:not(:first-child) {
+  @apply mt-1;
 }
 .footer-first-li {
-  @apply mx-2 rounded-3xl bg-gray-500 p-2;
+  @apply cursor-pointer rounded-3xl bg-gray-500 p-2;
 }
 .footer-first-li :hover {
   @apply opacity-80;
-}
-.footer-li:not(:first-child) {
-  @apply mt-1;
 }
 .footer-input {
   @apply my-2 h-10 w-full rounded-md border-2 border-gray-400;

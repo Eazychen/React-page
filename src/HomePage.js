@@ -1,6 +1,8 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+
+import Input from "./input";
 
 const UlGroup = ({ datas, className }) => {
   const navigate = useNavigate();
@@ -10,13 +12,34 @@ const UlGroup = ({ datas, className }) => {
         <li
           className={className.liGroup}
           key={data.id}
-          onClick={() => navigate(data.path)}
+          onClick={() => navigate(data.path, { state: "TW102324" })}
         >
           {data.title}
         </li>
       ))}
     </ul>
   );
+};
+
+const Services = () => {
+  useEffect(() => {
+    fetch("/services")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+  });
+  const location = useLocation();
+  console.log(location);
+  return <h2>{location.state}</h2>;
+};
+
+const Contact = () => {
+  const params = useParams();
+  const { id } = params;
+  return <h2>contact us{id}</h2>;
 };
 
 const HomePage = () => {
@@ -27,57 +50,64 @@ const HomePage = () => {
   ];
   return (
     <div>
-      <div className="nav">
+      <nav className="nav">
         <div className="p-4 text-center text-4xl font-bold">Title</div>
         <UlGroup
           datas={datas}
           className={{ ul: "nav-ul", liGroup: "nav-li-group" }}
         />
-      </div>
-      <footer>
-        <div className="footer">
-          <div className="pr-2">
-            <h3 className="mb-3 text-4xl font-bold">Title</h3>
-            <ul className="flex justify-start">
-              <li className="footer-first-li">
-                <FaInstagram size={20} color="#fff" />
-              </li>
-              <li className="footer-first-li">
-                <FaFacebookF size={20} color="#fff" />
-              </li>
-              <li className="footer-first-li">
-                <FaTiktok size={20} color="#fff" />{" "}
-              </li>
-            </ul>
-          </div>
-          <UlGroup datas={datas} className={{ liGroup: "footer-li" }} />
-          <div className="px-2">
-            <ul>
-              <li>常見問題</li>
-              <li className="pt-1">服務條款</li>
-              <li className="pt-1">隱私權服務</li>
-            </ul>
-          </div>
-          <div className="flex flex-col pl-2">
-            <h4>訂閱最新消息</h4>
-            <div>
-              <input
-                type="email"
-                className="footer-input"
-                placeholder="Email"
-              />
+      </nav>
+      <Input />
+      <footer className="border-t-2 border-gray-200">
+        <div className="mx-56 px-6">
+          <div className="footer">
+            <div className="pr-2">
+              <h3 className="mb-3 text-4xl font-bold">Title</h3>
+              <ul className="flex justify-start">
+                <li className="footer-first-li">
+                  <FaInstagram size={20} color="#fff" />
+                </li>
+                <li className="footer-first-li mx-2">
+                  <FaFacebookF size={20} color="#fff" />
+                </li>
+                <li className="footer-first-li">
+                  <FaTiktok size={20} color="#fff" />{" "}
+                </li>
+              </ul>
             </div>
-            <button type="button" className="btn-dangerous">
-              訂閱
-            </button>
+            <UlGroup
+              datas={datas}
+              className={{ ul: "px-2", liGroup: "footer-li" }}
+            />
+            <div className="px-2">
+              <ul>
+                <li>常見問題</li>
+                <li className="pt-1">服務條款</li>
+                <li className="pt-1">隱私權服務</li>
+              </ul>
+            </div>
+            <div className="flex flex-col pl-2">
+              <label htmlFor="email">訂閱最新消息</label>
+              <div>
+                <input
+                  type="email"
+                  className="footer-input"
+                  placeholder="Email"
+                  id="email"
+                />
+              </div>
+              <button type="button" className="btn-dangerous">
+                訂閱
+              </button>
+            </div>
           </div>
+          <p className="py-6 text-center font-bold">
+            Copyright &copy; 2023-2024 Eazy All rights reserved.
+          </p>
         </div>
-        <p className="mx-20 px-6 text-center font-bold">
-          Copyright &copy; 2023-2024 Eazy All rights reserved.
-        </p>
       </footer>
     </div>
   );
 };
 
-export default HomePage;
+export { HomePage, Services, Contact };
