@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import Swiper from "./Swiper.js";
 
-import Input from "./input";
+// import Input from "./input";
 
 const UlGroup = ({ datas, className }) => {
   const navigate = useNavigate();
@@ -51,13 +52,14 @@ const HomePage = () => {
   return (
     <div>
       <nav className="nav">
-        <div className="p-4 text-center text-4xl font-bold">Title</div>
+        <div className="py-4 text-center text-4xl font-bold">Title</div>
         <UlGroup
           datas={datas}
           className={{ ul: "nav-ul", liGroup: "nav-li-group" }}
         />
       </nav>
-      <Input />
+      <Swiper />
+      {/* <Input /> */}
       <footer className="border-t-2 border-gray-200">
         <div className="mx-56 px-6">
           <div className="footer">
