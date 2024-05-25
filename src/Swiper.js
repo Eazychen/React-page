@@ -1,8 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 
 const SwiperComponent = () => {
@@ -10,8 +8,10 @@ const SwiperComponent = () => {
     <Swiper
       spaceBetween={30}
       centeredSlides={true}
+      slidesPerView="auto"
+      loop={true}
       autoplay={{
-        delay: 5000,
+        delay: 2500,
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
@@ -19,18 +19,54 @@ const SwiperComponent = () => {
       style={{ minHeight: "500px" }}
     >
       <SwiperSlide>
-        <div style={{ backgroundColor: "lightblue", minHeight: "500px" }}>
-          Slide1
+        <div
+          style={{
+            backgroundColor: "lightblue",
+            maxHeight: "500px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="https://picsum.photos/id/237/800/300"
+            alt=""
+            className="h-full w-full rounded-lg object-cover"
+          />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div style={{ backgroundColor: "lightcoral", minHeight: "500px" }}>
-          Slide 2
+        <div
+          style={{
+            backgroundColor: "lightcoral",
+            maxHeight: "500px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="https://picsum.photos/id/232/800/300"
+            alt=""
+            className="h-full w-full rounded-lg object-cover"
+          />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div style={{ backgroundColor: "lightgreen", minHeight: "500px" }}>
-          Slide 3
+        <div
+          style={{
+            backgroundColor: "lightgreen",
+            maxHeight: "500px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <img
+            src="https://picsum.photos/id/234/800/300"
+            alt=""
+            className="h-full w-full rounded-lg object-cover"
+          />
         </div>
       </SwiperSlide>
     </Swiper>
