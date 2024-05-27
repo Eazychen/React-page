@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DefaultComponent from "./DefaultComponent";
 import { HomePage, Services, Contact } from "./HomePage";
 import "./index.css";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,7 +23,11 @@ const routers = createBrowserRouter([
   },
 ]);
 
-root.render(<RouterProvider router={routers} />);
+root.render(
+  <ParallaxProvider>
+    <RouterProvider router={routers} />
+  </ParallaxProvider>,
+);
 
 // root.render(
 // 	<React.StrictMode>
