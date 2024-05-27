@@ -26,9 +26,9 @@ const Header = () => {
     { id: 3, title: "聯繫我們", path: "/contact" },
   ];
   return (
-    <div>
+    <div className="bg-white-alpha-0 sticky left-0 right-0 top-0 z-20">
       <nav className="nav">
-        <div className="py-4 text-center text-4xl font-bold">Title</div>
+        <div className="my-5 text-4xl font-bold">Title</div>
         <UlGroup
           datas={datas}
           className={{ ul: "nav-ul", liGroup: "nav-li-group" }}

@@ -17,61 +17,36 @@ const SwiperComponent = () => {
       }}
       modules={[Autoplay]}
       className="mySwiper"
-      style={{ minHeight: "500px" }}
     >
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div
-            style={{
-              backgroundColor: "lightblue",
-              maxHeight: "500px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="slide">
             <img
               src="https://picsum.photos/id/237/800/300"
               alt=""
-              className="h-full w-full rounded-lg object-cover"
+              className="h-full w-full rounded-lg object-cover align-middle"
             />
           </div>
         </Parallax>
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div
-            style={{
-              backgroundColor: "lightcoral",
-              maxHeight: "500px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="slide">
             <img
               src="https://picsum.photos/id/232/800/300"
               alt=""
-              className="h-full w-full rounded-lg object-cover"
+              className="h-full w-full rounded-lg object-cover align-middle"
             />
           </div>
         </Parallax>
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div
-            style={{
-              backgroundColor: "lightgreen",
-              maxHeight: "500px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className="slide">
             <img
               src="https://picsum.photos/id/234/800/300"
               alt=""
-              className="h-full w-full rounded-lg object-cover"
+              className="h-full w-full rounded-lg object-cover align-middle"
             />
           </div>
         </Parallax>

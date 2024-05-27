@@ -27,7 +27,7 @@ const Footer = () => {
   ];
   return (
     <div>
-      <footer className="border-t-2 border-gray-200">
+      <footer className="border-t-2 border-solid border-gray-200">
         <div className="mx-56 px-6">
           <div className="footer">
             <div className="pr-2">

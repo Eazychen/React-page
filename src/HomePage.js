@@ -3,6 +3,7 @@ import { useLocation, useParams } from "react-router-dom";
 import Swiper from "./Swiper.js";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
+import FeaturesSection from "./FeaturesSection.js";
 
 const Services = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const HomePage = () => {
     <div>
       <Header />
       <Swiper />
+      <FeaturesSection />
       <Footer />
     </div>
   );

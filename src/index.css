@@ -3,14 +3,17 @@
 @tailwind utilities;
 
 .nav {
-  @apply bg-white-alpha-0 sticky left-0 right-0 top-0 z-10 grid grid-cols-[20%_80%] px-6 py-4;
+  @apply mx-56 grid grid-cols-[20%_80%] px-6;
 }
 .nav-ul {
-  @apply ml-auto flex items-center;
+  @apply my-5 ml-auto flex items-center;
 }
 
 .nav-li-group {
-  @apply cursor-pointer p-3 text-xl;
+  @apply cursor-pointer p-2 text-xl;
+}
+.nav-li-group:nth-child(even) {
+  @apply mx-3;
 }
 
 .nav-li-group:hover {
@@ -42,4 +45,41 @@
 }
 .btn-dangrous:hover {
   @apply bg-red-900;
+}
+.slide {
+  @apply flex items-center justify-center;
+}
+.service {
+  @apply flex w-full py-10;
+}
+.service:nth-child(even) {
+  @apply flex-row-reverse;
+}
+
+.service-pic {
+  @apply w-1/2 bg-gray-300 opacity-60;
+}
+
+.service-pic img {
+  @apply max-h-96 w-full rounded-xl object-cover;
+}
+
+.service-paragraph {
+  @apply z-10 w-1/2 self-center bg-cyan-400 p-3 tracking-widest;
+}
+
+.service-paragraph h3 {
+  @apply relative py-2 text-3xl;
+}
+
+.service-paragraph p {
+  @apply text-lg leading-10;
+}
+
+.service:nth-child(odd) .service-paragraph {
+  @apply -ml-10 text-center;
+}
+
+.service:nth-child(even) .service-paragraph {
+  @apply -mr-10 text-center;
 }
