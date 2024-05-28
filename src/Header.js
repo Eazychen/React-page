@@ -22,6 +22,7 @@ const UlGroup = ({ datas, className }) => {
 const Header = () => {
   const datas = [
     { id: 1, title: "精選服務", path: "/services" },
+    { id: 1, title: "智慧居家", path: "/Smarthome" },
     { id: 2, title: "品牌故事", path: "/about" },
     { id: 3, title: "聯繫我們", path: "/contact" },
   ];

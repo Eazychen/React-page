@@ -2,7 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DefaultComponent from "./DefaultComponent";
-import { HomePage, Services, Contact } from "./HomePage";
+import HomePage from "./HomePage";
+import Services from "./Services";
 import "./index.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -16,10 +17,6 @@ const routers = createBrowserRouter([
   {
     path: "/services",
     element: <DefaultComponent {...{ Component: Services }} />,
-  },
-  {
-    path: "/contact/:id",
-    element: <DefaultComponent {...{ Component: Contact }} />,
   },
 ]);
 

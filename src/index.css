@@ -12,9 +12,6 @@
 .nav-li-group {
   @apply cursor-pointer p-2 text-xl;
 }
-.nav-li-group:nth-child(even) {
-  @apply mx-3;
-}
 
 .nav-li-group:hover {
   @apply -translate-y-2 rounded-md bg-sand-color delay-300;
@@ -47,17 +44,17 @@
   @apply bg-red-900;
 }
 .slide {
-  @apply flex items-center justify-center;
+  @apply flex max-h-96 items-center justify-center;
 }
 .service {
-  @apply flex w-full py-10;
+  @apply flex w-full justify-center py-10;
 }
 .service:nth-child(even) {
   @apply flex-row-reverse;
 }
 
 .service-pic {
-  @apply w-1/2 bg-gray-300 opacity-60;
+  @apply w-1/2 rounded-xl bg-gray-300 opacity-60;
 }
 
 .service-pic img {
@@ -65,7 +62,7 @@
 }
 
 .service-paragraph {
-  @apply z-10 w-1/2 self-center bg-cyan-400 p-3 tracking-widest;
+  @apply z-10 w-1/2 self-center rounded-xl bg-slate-500 p-3 tracking-widest text-white;
 }
 
 .service-paragraph h3 {
@@ -77,9 +74,9 @@
 }
 
 .service:nth-child(odd) .service-paragraph {
-  @apply -ml-10 text-center;
+  @apply -ml-4 text-center;
 }
 
 .service:nth-child(even) .service-paragraph {
-  @apply -mr-10 text-center;
+  @apply -mr-4 text-center;
 }
