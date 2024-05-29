@@ -1,10 +1,13 @@
 import React from "react";
 
-const FeatureSection = ({ featureSectionDatas }) => {
+const FeatureSection = ({ serviceFeatureSectionDatas }) => {
   return (
-    <div className="mt-15">
+    <div className="my-24">
       <div className="mx-56 px-6">
-        {featureSectionDatas.map((data, index) => {
+        <div className="featuresectiontitle">
+          <h3 className="p-3 text-6xl">我們的服務</h3>
+        </div>
+        {serviceFeatureSectionDatas.map((data, index) => {
           return (
             <SectionComponent
               data={data}
@@ -26,18 +29,11 @@ const SectionComponent = ({ data, className }) => {
   return (
     <div className={className.service}>
       <div className={className.servicePic}>
-        <img src="https://picsum.photos/id/208/600/300" alt="" />
+        <img src={data.imgUrl} alt="" />
       </div>
       <div className={className.serviceParagraph}>
-        <h3>{data.title}</h3>
-        <p>
-          {data.paragraph.split("\n").map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
-        </p>
+        <h4>{data.title}</h4>
+        <p>{data.paragraph}</p>
       </div>
     </div>
   );

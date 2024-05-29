@@ -16,7 +16,7 @@ const SwiperComponent = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className="mySwiper"
+      className="mySwiper mb-3"
     >
       <SwiperSlide>
         <Parallax speed={-10}>

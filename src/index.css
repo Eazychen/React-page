@@ -46,37 +46,40 @@
 .slide {
   @apply flex max-h-96 items-center justify-center;
 }
+.featuresectiontitle {
+  @apply flex justify-center py-4;
+}
 .service {
-  @apply flex w-full justify-center py-10;
+  @apply relative flex w-full justify-center py-10;
 }
 .service:nth-child(even) {
   @apply flex-row-reverse;
 }
 
 .service-pic {
-  @apply w-1/2 rounded-xl bg-gray-300 opacity-60;
+  @apply w-3/4 bg-gray-300 opacity-60;
 }
 
 .service-pic img {
-  @apply max-h-96 w-full rounded-xl object-cover;
+  @apply h-full  w-full object-cover;
 }
 
 .service-paragraph {
-  @apply z-10 w-1/2 self-center rounded-xl bg-slate-500 p-3 tracking-widest text-white;
+  @apply absolute top-1/4 z-10 w-1/2 rounded-xl bg-slate-500  p-10  tracking-widest text-white;
 }
 
-.service-paragraph h3 {
-  @apply relative py-2 text-3xl;
+.service-paragraph h4 {
+  @apply relative p-2 text-3xl;
 }
 
 .service-paragraph p {
-  @apply text-lg leading-10;
+  @apply p-2 text-xl leading-10;
 }
 
 .service:nth-child(odd) .service-paragraph {
-  @apply -ml-4 text-center;
+  @apply left-0;
 }
 
 .service:nth-child(even) .service-paragraph {
-  @apply -mr-4 text-center;
+  @apply right-0;
 }

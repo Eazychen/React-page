@@ -19,13 +19,7 @@ const UlGroup = ({ datas, className }) => {
   );
 };
 
-const Header = () => {
-  const datas = [
-    { id: 1, title: "精選服務", path: "/services" },
-    { id: 1, title: "智慧居家", path: "/Smarthome" },
-    { id: 2, title: "品牌故事", path: "/about" },
-    { id: 3, title: "聯繫我們", path: "/contact" },
-  ];
+const Header = ({ datas }) => {
   return (
     <div className="bg-white-alpha-0 sticky left-0 right-0 top-0 z-20">
       <nav className="nav">
