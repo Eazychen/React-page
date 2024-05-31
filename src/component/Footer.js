@@ -22,10 +22,10 @@ const UlGroup = ({ datas, className }) => {
 const Footer = ({ datas }) => {
   return (
     <div>
-      <footer className="border-t-2 border-solid border-gray-200">
+      <footer className="bg-grey-color border-t-2 border-solid border-gray-200">
         <div className="mx-56 px-6">
           <div className="footer">
-            <div className="ml-2">
+            <div>
               <h3 className="mb-3 text-4xl font-bold">Title</h3>
               <ul className="flex justify-start">
                 <li className="footer-first-li">
@@ -45,9 +45,9 @@ const Footer = ({ datas }) => {
             />
             <div className="px-2">
               <ul>
-                <li>常見問題</li>
-                <li className="mt-1">服務條款</li>
-                <li className="mt-1">隱私權服務</li>
+                <li className="footer-li">常見問題</li>
+                <li className="footer-li mt-1">服務條款</li>
+                <li className="footer-li mt-1">隱私權服務</li>
               </ul>
             </div>
             <div className="mr-2 flex flex-col">

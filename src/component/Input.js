@@ -19,7 +19,7 @@ const Input = () => {
               alert("please enter a email");
               return;
             }
-            fetch("/signUpAccount", {
+            fetch("/api/stock/signup", {
               method: "post",
               headers: {
                 "Content-type": "application/json",

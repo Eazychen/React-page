@@ -2,7 +2,7 @@ import React from "react";
 
 const FeatureSection = ({ serviceFeatureSectionDatas }) => {
   return (
-    <div className="my-24">
+    <div className="bg-grey-color py-10">
       <div className="mx-56 px-6">
         <div className="featuresectiontitle">
           <h3 className="p-3 text-6xl">我們的服務</h3>

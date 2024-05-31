@@ -1,8 +1,9 @@
 import React from "react";
-import Swiper from "./Swiper.js";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
-import FeatureSection from "./FeatureSection.js";
+import Swiper from "./component/Swiper.js";
+import Header from "./component/Header.js";
+import Footer from "./component/Footer.js";
+import FeatureSection from "./component/FeatureSection.js";
+import MagazineLayout from "./component/MagazineLayout.js";
 
 const HomePage = () => {
   const datas = [
@@ -37,6 +38,7 @@ const HomePage = () => {
     <div>
       <Header datas={datas} />
       <Swiper />
+      <MagazineLayout />
       <FeatureSection serviceFeatureSectionDatas={serviceFeatureSectionDatas} />
       <Footer datas={datas} />
     </div>

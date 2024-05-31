@@ -16,11 +16,11 @@ const SwiperComponent = () => {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className="mySwiper mb-3"
+      className="mySwiper"
     >
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide">
+          <div className="slide max-h-swiper-silde">
             <img
               src="https://picsum.photos/id/237/800/300"
               alt=""
@@ -31,7 +31,7 @@ const SwiperComponent = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide">
+          <div className="slide max-h-swiper-silde">
             <img
               src="https://picsum.photos/id/232/800/300"
               alt=""
@@ -42,7 +42,7 @@ const SwiperComponent = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide">
+          <div className="slide max-h-swiper-silde">
             <img
               src="https://picsum.photos/id/234/800/300"
               alt=""

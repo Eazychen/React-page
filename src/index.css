@@ -10,17 +10,28 @@
 }
 
 .nav-li-group {
-  @apply cursor-pointer p-2 text-xl;
+  @apply cursor-pointer justify-between px-1 py-2 text-xl;
+}
+
+.nav-li-group:nth-child(2),
+.nav-li-group:nth-child(3) {
+  @apply mx-2 cursor-pointer justify-between text-xl;
 }
 
 .nav-li-group:hover {
-  @apply -translate-y-2 rounded-md bg-sand-color delay-300;
+  @apply -translate-y-2 rounded-md bg-white-alpha-0 shadow-md delay-300;
 }
 
 .footer {
   @apply grid grid-cols-4 py-12;
 }
-
+.footer-li {
+  @apply cursor-pointer;
+}
+.footer-li:focus,
+.footer-li:hover {
+  @apply text-brown-normal;
+}
 .footer-li:not(:first-child) {
   @apply mt-1;
 }
@@ -33,6 +44,7 @@
 .footer-input {
   @apply my-2 h-10 w-full rounded-md border-2 border-gray-400;
 }
+
 .footer-input:focus,
 .footer-input:hover {
   @apply border-black;
@@ -44,7 +56,7 @@
   @apply bg-red-900;
 }
 .slide {
-  @apply flex max-h-96 items-center justify-center;
+  @apply flex items-center justify-center;
 }
 .featuresectiontitle {
   @apply flex justify-center py-4;
@@ -57,7 +69,7 @@
 }
 
 .service-pic {
-  @apply w-3/4 bg-gray-300 opacity-60;
+  @apply w-3/4 bg-gray-300;
 }
 
 .service-pic img {
@@ -65,15 +77,15 @@
 }
 
 .service-paragraph {
-  @apply absolute top-1/4 z-10 w-1/2 rounded-xl bg-slate-500  p-10  tracking-widest text-white;
+  @apply bg-paragraph-color absolute top-1/2 z-10 w-1/2 -translate-y-1/2 rounded-xl  p-10 tracking-widest text-white opacity-90;
 }
 
 .service-paragraph h4 {
-  @apply relative p-2 text-3xl;
+  @apply p-2 text-3xl;
 }
 
 .service-paragraph p {
-  @apply p-2 text-xl leading-10;
+  @apply break-all p-2 text-xl leading-10;
 }
 
 .service:nth-child(odd) .service-paragraph {
