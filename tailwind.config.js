@@ -7,7 +7,8 @@ module.exports = {
         "white-alpha-0": "rgba(255, 255, 255,0.1)",
         "paragraph-color": "#1297bd",
         "grey-color": "#f3f1f1",
-        "story-color": "#1ad7db",
+        "green-color": "#eceff4",
+        "story-color": "rgba(26, 215, 219,0.5)",
         "light-grey-color": "#364968",
       },
       maxHeight: {
