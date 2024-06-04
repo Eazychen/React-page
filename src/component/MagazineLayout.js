@@ -4,7 +4,7 @@ const MagazineLayout = () => {
   return (
     <div>
       <div className="bg-grey-color">
-        <div className="mx-56 px-6 py-10">
+        <div className="mx-56 px-6 pb-10">
           <div className="grid grid-cols-4 grid-rows-4 gap-5">
             <div className="col-span-2 col-start-2 row-span-1 row-start-1">
               <div className="flex h-full items-center justify-center">
@@ -25,7 +25,7 @@ const MagazineLayout = () => {
             </div>
             <div className="bg-story-color col-span-2 col-start-3 row-span-1 row-start-4 rounded-r-3xl p-2">
               <div className="flex h-full items-center justify-center ">
-                <p className="break-all  p-2 text-2xl leading-10 tracking-wider">
+                <p className="break-all p-4 text-xl leading-10 tracking-wider">
                   我們深知電器不僅是日常生活中的工具，
                   <br />
                   更是提升生活品質的重要夥伴。
@@ -61,12 +61,12 @@ const MagazineLayout = () => {
             </div>
             <div className="bg-story-color col-span-2 col-start-1 row-span-1 row-start-4 rounded-l-3xl p-2">
               <div className="flex h-full items-center justify-center">
-                <p className="break-all p-2 text-2xl leading-10 tracking-widest">
+                <p className="break-all p-4 text-xl leading-10 tracking-widest">
                   我們特別注重施工的整潔與細節，
                   <br />
                   這是我們與眾不同的關鍵。
                   <br />
-                  在每一次的安裝和維修服務中
+                  在每一次的安裝和維修服務中，
                   <br />
                   我們都會確保工作現場的整潔，
                   <br />

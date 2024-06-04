@@ -50,10 +50,11 @@
   @apply border-black;
 }
 .btn-dangerous {
-  @apply cursor-pointer rounded-md bg-red-500 px-1 py-2 text-white;
+  @apply cursor-pointer rounded-md bg-red-500 px-1 py-2 text-white shadow-sm shadow-black;
 }
-.btn-dangrous:hover {
-  @apply bg-red-900;
+.btn-dangerous:hover,
+.btn-dangerous:focus {
+  @apply -translate-y-1 bg-red-900;
 }
 .slide {
   @apply flex items-center justify-center;
@@ -94,4 +95,25 @@
 
 .service:nth-child(even) .service-paragraph {
   @apply right-0;
+}
+
+.form-label-required {
+  @apply flex items-center p-2 tracking-widest;
+}
+.form-label-required::after {
+  content: "*";
+  color: red;
+}
+
+.form-input {
+  @apply w-1/2 border-2 border-solid border-gray-300 p-4 text-xl;
+}
+
+.form-button {
+  @apply bg-paragraph-color flex w-1/5 items-center justify-center rounded-2xl p-2 text-xl tracking-widest opacity-70 shadow-sm shadow-stone-950;
+}
+
+.form-button:hover,
+.form-button:focus {
+  @apply bg-paragraph-color -translate-x-1 -translate-y-1 opacity-100;
 }

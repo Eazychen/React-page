@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
+import { FaTelegramPlane } from "react-icons/fa";
 
 const FormComponent = () => {
   const phoneRef = useRef();
   const nameRef = useRef();
   const [service, setService] = useState("");
+  const [errors, setErrors] = useState({ name: "", phone: "", service: "" });
   const phoneValidate = (phone) => {
     const phoneRegex =
       /^(\+?\d{1,3})?[-.\s]?(\(?\d{1,4}\)?)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
@@ -12,30 +14,78 @@ const FormComponent = () => {
   const handleInput = (e) => {
     e.target.value = e.target.value.replace(/\s+/g, "").trim();
   };
+  const handlesubmit = () => {
+    const phone = phoneRef.current.value.trim();
+    const name = nameRef.current.value.trim();
+    let formErrors = { name: "", phone: "", service: "" };
+    let isValid = true;
+
+    if (name === "") {
+      formErrors.name = "請輸入名稱";
+      isValid = false;
+    }
+    if (!phoneValidate(phone)) {
+      formErrors.phone = "請輸入電話";
+      isValid = false;
+    }
+    if (service === "") {
+      formErrors.service = "請選擇服務";
+      isValid = false;
+    }
+    setErrors(formErrors);
+
+    if (!isValid) return;
+    submitForm({ phone, name, service });
+  };
+
+  const submitForm = async (formData) => {
+    try {
+      const response = fetch(
+        "/services",
+        {
+          method: "post",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        },
+        console.log(123),
+      );
+      const data = await response.json();
+      nameRef.current.value = "";
+      phoneRef.current.value = "";
+      setService("");
+      setErrors({ name: "", phone: "", service: "" });
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div>
-      <div className="mx-56 mb-5 mt-20 flex justify-center px-6">
-        <div className="w-full border-4 border-solid border-black py-5">
+      <div className="mx-56 mb-16 mt-24 flex justify-center px-6">
+        <div className="border-grey-100 w-full rounded-md border-2 border-solid py-5 shadow-sm shadow-gray-200">
           <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="name" className="flex items-center p-2">
+            <label htmlFor="name" className="form-label-required">
               聯絡姓名：
             </label>
             <input
               type="text"
-              className="w-1/2 border-2 border-solid border-gray-300 p-4"
+              className={`form-input ${errors.name ? "border-red-500" : ""}`}
               required
               ref={nameRef}
               placeholder="請輸入姓名"
               onChange={handleInput}
+              id="name"
             />
           </div>
           <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="tel" className="flex items-center p-2">
+            <label htmlFor="tel" className="form-label-required">
               手機號碼：
             </label>
             <input
               type="tel"
-              className="w-1/2 border-2 border-solid border-gray-300 p-4 text-xl"
+              className={`form-input ${errors.phone ? "border-red-500" : ""}`}
               ref={phoneRef}
               required
               id="tel"
@@ -45,13 +95,13 @@ const FormComponent = () => {
             />
           </div>
           <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="service" className="flex items-center p-2">
+            <label htmlFor="service" className="form-label-required">
               選擇服務：
             </label>
             <select
               id="service"
               value={service}
-              className="flex w-1/2 border-2 border-solid border-gray-300 p-4 text-xl "
+              className={`form-input ${errors.service ? "border-red-500" : ""}`}
               onChange={(e) => setService(e.target.value)}
             >
               <option value="">請選擇服務</option>
@@ -64,44 +114,11 @@ const FormComponent = () => {
           <div className="flex justify-center p-4">
             <button
               type="button"
-              className="btn-dangerous w-1/4"
-              onClick={() => {
-                const phone = phoneRef.current.value.trim();
-                const name = nameRef.current.value.trim();
-                if (name === "") {
-                  alert("please enter a name");
-                  return;
-                }
-                if (!phoneValidate(phone)) {
-                  alert("please enter a phone");
-                  return;
-                }
-                if (service === "") {
-                  alert("please select a service");
-                }
-                fetch("/services", {
-                  method: "post",
-                  headers: {
-                    "Content-type": "application/json",
-                  },
-                  body: JSON.stringify({ phone, name, service }),
-                })
-                  .then((res) => {
-                    console.log(res);
-                    return res.json();
-                  })
-                  .then((data) => {
-                    console.log(data);
-                    nameRef.current.value = "";
-                    phoneRef.current.value = "";
-                    setService("");
-                  })
-                  .catch((err) => {
-                    console.log(err);
-                  });
-              }}
+              className="form-button"
+              onClick={handlesubmit}
             >
               送出
+              <FaTelegramPlane />
             </button>
           </div>
         </div>
