@@ -21,9 +21,9 @@ const UlGroup = ({ datas, className }) => {
 
 const Header = ({ datas }) => {
   return (
-    <div className="bg-nav-color fixed left-0 right-0 top-0 z-20">
+    <div className="bg-nav-color bg-black-alpha fixed left-0 right-0 top-0 z-20">
       <nav className="nav text-brown-normal">
-        <div className="my-5 text-4xl font-bold">Title</div>
+        <div className="my-3 text-4xl font-bold">Title</div>
         <UlGroup
           datas={datas}
           className={{ ul: "nav-ul", liGroup: "nav-li-group" }}

@@ -4,18 +4,17 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        "white-alpha-0": "rgba(255, 255, 255,0.1)",
+        "black-alpha": "rgba(0, 0, 0, 0.9)",
         "paragraph-color": "#1297bd",
         "grey-color": "#f3f1f1",
-        "green-color": "#eceff4",
         "story-color": "rgba(26, 215, 219,0.5)",
-        "light-grey-color": "#364968",
       },
       maxHeight: {
         "swiper-silde": "36em",
       },
       colors: {
         "brown-normal": "#5f2f14",
+        "blue-normal": "#1297bd",
       },
     },
   },

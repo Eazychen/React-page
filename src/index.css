@@ -6,11 +6,11 @@
   @apply mx-56 grid grid-cols-[20%_80%] px-6;
 }
 .nav-ul {
-  @apply my-5 ml-auto flex items-center;
+  @apply my-3  ml-auto flex items-center;
 }
 
 .nav-li-group {
-  @apply cursor-pointer justify-between px-1 py-2 text-xl;
+  @apply cursor-pointer justify-between px-1 py-2 text-xl text-neutral-400;
 }
 
 .nav-li-group:nth-child(2),
@@ -19,18 +19,18 @@
 }
 
 .nav-li-group:hover {
-  @apply -translate-y-2 rounded-md bg-white-alpha-0 shadow-md delay-300;
+  @apply -translate-y-2 rounded-md bg-gray-700 shadow-md delay-300;
 }
 
 .footer {
-  @apply grid grid-cols-4 py-12;
+  @apply grid grid-cols-4  py-12;
 }
 .footer-li {
-  @apply cursor-pointer;
+  @apply cursor-pointer text-lg;
 }
 .footer-li:focus,
 .footer-li:hover {
-  @apply text-brown-normal;
+  @apply text-blue-normal;
 }
 .footer-li:not(:first-child) {
   @apply mt-1;

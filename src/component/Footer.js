@@ -22,7 +22,7 @@ const UlGroup = ({ datas, className }) => {
 const Footer = ({ datas }) => {
   return (
     <div>
-      <footer className="bg-grey-color border-t-2 border-solid border-gray-200">
+      <footer className="border-t-2 border-solid border-gray-300 bg-gray-100">
         <div className="mx-56 px-6">
           <div className="footer">
             <div>
@@ -44,7 +44,7 @@ const Footer = ({ datas }) => {
               className={{ ul: "px-2", liGroup: "footer-li" }}
             />
             <div className="px-2">
-              <ul>
+              <ul className="text-lg">
                 <li className="footer-li">常見問題</li>
                 <li className="footer-li mt-1">服務條款</li>
                 <li className="footer-li mt-1">隱私權服務</li>
@@ -65,9 +65,13 @@ const Footer = ({ datas }) => {
               </button>
             </div>
           </div>
-          <p className="py-6 text-center font-bold">
-            Copyright &copy; 2023-2024 Eazy All rights reserved.
-          </p>
+        </div>
+        <div className="bg-black">
+          <div className="mx-56 px-6">
+            <p className="py-3 text-center font-bold text-gray-500">
+              Copyright &copy; 2023-2024 Eazy All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>
