@@ -4,7 +4,7 @@ const MagazineLayout = () => {
   return (
     <div>
       <div className="bg-grey-color">
-        <div className="mx-56 px-6 pb-10">
+        <div className="container-layout pb-10">
           <div className="grid grid-cols-4 grid-rows-4 gap-5">
             <div className="col-span-2 col-start-2 row-span-1 row-start-1">
               <div className="flex h-full items-center justify-center">
@@ -40,7 +40,7 @@ const MagazineLayout = () => {
         </div>
       </div>
       <div className="bg-white">
-        <div className="mx-56 px-6 py-10">
+        <div className="container-layout py-10">
           <div className="grid grid-cols-4 grid-rows-4 gap-5">
             <div className="col-span-2 col-start-2 row-span-1 row-start-1">
               <div className="flex h-full items-center justify-center">

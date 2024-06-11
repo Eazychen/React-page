@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import DefaultComponent from "./DefaultComponent";
 import HomePage from "./HomePage";
 import Services from "./Services";
+import SmartAppliances from "./SmartAppliances";
 import "./index.css";
 import { ParallaxProvider } from "react-scroll-parallax";
 
@@ -17,6 +18,10 @@ const routers = createBrowserRouter([
   {
     path: "/services",
     element: <DefaultComponent {...{ Component: Services }} />,
+  },
+  {
+    path: "/smartappliances",
+    element: <DefaultComponent {...{ Component: SmartAppliances }} />,
   },
 ]);
 

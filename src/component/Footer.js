@@ -23,7 +23,7 @@ const Footer = ({ datas }) => {
   return (
     <div>
       <footer className="border-t-2 border-solid border-gray-300 bg-gray-100">
-        <div className="mx-56 px-6">
+        <div className="container-layout">
           <div className="footer">
             <div>
               <h3 className="mb-3 text-4xl font-bold">Title</h3>
@@ -67,7 +67,7 @@ const Footer = ({ datas }) => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="mx-56 px-6">
+          <div className="container-layout">
             <p className="py-3 text-center font-bold text-gray-500">
               Copyright &copy; 2023-2024 Eazy All rights reserved.
             </p>

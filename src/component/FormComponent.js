@@ -1,127 +1,120 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
+import { useForm } from "react-hook-form";
 
 const FormComponent = () => {
-  const phoneRef = useRef();
-  const nameRef = useRef();
-  const [service, setService] = useState("");
-  const [errors, setErrors] = useState({ name: "", phone: "", service: "" });
-  const phoneValidate = (phone) => {
-    const phoneRegex =
-      /^(\+?\d{1,3})?[-.\s]?(\(?\d{1,4}\)?)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
-    return phoneRegex.test(phone);
-  };
-  const handleInput = (e) => {
-    e.target.value = e.target.value.replace(/\s+/g, "").trim();
-  };
-  const handlesubmit = () => {
-    const phone = phoneRef.current.value.trim();
-    const name = nameRef.current.value.trim();
-    let formErrors = { name: "", phone: "", service: "" };
-    let isValid = true;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
-    if (name === "") {
-      formErrors.name = "請輸入名稱";
-      isValid = false;
-    }
-    if (!phoneValidate(phone)) {
-      formErrors.phone = "請輸入電話";
-      isValid = false;
-    }
-    if (service === "") {
-      formErrors.service = "請選擇服務";
-      isValid = false;
-    }
-    setErrors(formErrors);
-
-    if (!isValid) return;
-    submitForm({ phone, name, service });
-  };
-
-  const submitForm = async (formData) => {
+  const onSubmit = async (data) => {
     try {
-      const response = fetch(
-        "/services",
-        {
-          method: "post",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(formData),
+      const response = await fetch("/services", {
+        method: "post",
+        headers: {
+          "Content-type": "application/json",
         },
-        console.log(123),
-      );
-      const data = await response.json();
-      nameRef.current.value = "";
-      phoneRef.current.value = "";
-      setService("");
-      setErrors({ name: "", phone: "", service: "" });
-      console.log(data);
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+      console.log(result);
+      reset();
     } catch (error) {
-      console.log(error);
+      console.error("there was an error submitting the form", error);
     }
   };
+  const inputHandler = (e) => {
+    e.target.value = e.target.value.replace(/\s+/g, "");
+  };
+  const keyDownHandler = (e) => {
+    if (e.key === " ") {
+      e.preventDefault();
+    }
+  };
+
   return (
     <div>
-      <div className="mx-56 mb-16 mt-24 flex justify-center px-6">
-        <div className="border-grey-100 w-full rounded-md border-2 border-solid py-5 shadow-sm shadow-gray-200">
-          <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="name" className="form-label-required">
-              聯絡姓名：
-            </label>
-            <input
-              type="text"
-              className={`form-input ${errors.name ? "border-red-500" : ""}`}
-              required
-              ref={nameRef}
-              placeholder="請輸入姓名"
-              onChange={handleInput}
-              id="name"
-            />
+      <div className="border-grey-100  container-layout mb-16 mt-24 rounded-md border-2 border-solid py-5 shadow-md shadow-gray-200">
+        <div className="mb-5 flex justify-center">
+          <h4 className="p-4 text-5xl">預約服務</h4>
+        </div>
+        <form className="w-full " onSubmit={handleSubmit(onSubmit)}>
+          <div className="flex justify-center">
+            <div className="flex w-2/3 justify-center text-xl ">
+              <label htmlFor="name" className="form-label-required">
+                聯絡姓名：
+              </label>
+              <input
+                type="text"
+                placeholder="請輸入姓名"
+                className={`form-input ${errors.service ? "form-input-error" : ""}`}
+                id="name"
+                onChange={inputHandler}
+                onKeyDown={keyDownHandler}
+                {...register("name", { required: "請輸入姓名" })}
+              />
+              <div className="error-message">
+                {errors.name && <p>{errors.name.message}</p>}
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="tel" className="form-label-required">
-              手機號碼：
-            </label>
-            <input
-              type="tel"
-              className={`form-input ${errors.phone ? "border-red-500" : ""}`}
-              ref={phoneRef}
-              required
-              id="tel"
-              placeholder="請輸入手機"
-              maxLength={10}
-              onChange={handleInput}
-            />
+          <div className="my-3 flex justify-center">
+            <div className="flex w-2/3 justify-center text-xl">
+              <label htmlFor="tel" className="form-label-required">
+                手機號碼：
+              </label>
+              <input
+                type="tel"
+                id="tel"
+                placeholder="請輸入手機"
+                className={`form-input ${errors.service ? "form-input-error" : ""}`}
+                maxLength={10}
+                onChange={inputHandler}
+                onKeyDown={keyDownHandler}
+                {...register("phone", {
+                  required: "請輸入電話",
+                  pattern: {
+                    value: /^09\d{8}$/,
+                    message: "請輸入有效電話號碼",
+                  },
+                })}
+              />
+              <div className="error-message">
+                {errors.phone && <p>{errors.phone.message}</p>}
+              </div>
+            </div>
           </div>
-          <div className="flex justify-center p-4 text-xl">
-            <label htmlFor="service" className="form-label-required">
-              選擇服務：
-            </label>
-            <select
-              id="service"
-              value={service}
-              className={`form-input ${errors.service ? "border-red-500" : ""}`}
-              onChange={(e) => setService(e.target.value)}
-            >
-              <option value="">請選擇服務</option>
-              <option value="service1">家中電器維修</option>
-              <option value="service2">家電安裝服務</option>
-              <option value="service3">家電保養服務</option>
-              <option value="service4">家電配置諮詢</option>
-            </select>
+          <div className="flex justify-center">
+            <div className="flex w-2/3 justify-center text-xl">
+              <label htmlFor="service" className="form-label-required">
+                選擇服務：
+              </label>
+              <select
+                id="service"
+                className={`form-input ${errors.service ? "form-input-error" : ""}`}
+                {...register("service", { required: "請選擇服務" })}
+              >
+                <option value="">請選擇服務</option>
+                <option value="service1">家中電器維修</option>
+                <option value="service2">家電安裝服務</option>
+                <option value="service3">家電保養服務</option>
+                <option value="service4">家電配置諮詢</option>
+              </select>
+              <div className="error-message">
+                {errors.service && <p>{errors.service.message}</p>}
+              </div>
+            </div>
           </div>
           <div className="flex justify-center p-4">
-            <button
-              type="button"
-              className="form-button"
-              onClick={handlesubmit}
-            >
+            <button type="submit" className="form-button">
               送出
               <FaTelegramPlane />
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
