@@ -23,7 +23,7 @@
 }
 
 .nav-li-group:hover {
-  @apply text-blue-normal -translate-y-2 rounded-md bg-gray-700 shadow-md delay-300;
+  @apply -translate-y-2 rounded-md bg-gray-700 text-blue-normal shadow-md delay-300;
 }
 
 .footer {
@@ -82,7 +82,7 @@
 }
 
 .service-paragraph {
-  @apply bg-paragraph-color absolute top-1/2 z-10 w-1/2 -translate-y-1/2 rounded-xl  p-10 tracking-widest text-white opacity-90;
+  @apply absolute top-1/2 z-10 w-1/2 -translate-y-1/2 rounded-xl bg-paragraph-color  p-10 tracking-widest text-white opacity-90;
 }
 
 .service-paragraph h4 {
@@ -121,10 +121,29 @@
 }
 
 .form-button {
-  @apply bg-paragraph-color flex w-1/5 items-center justify-center rounded-2xl p-2 text-xl tracking-widest opacity-70 shadow-sm shadow-stone-950;
+  @apply flex w-1/5 items-center justify-center rounded-2xl bg-paragraph-color p-2 text-xl tracking-widest opacity-70 shadow-sm shadow-stone-950;
 }
 
 .form-button:hover,
 .form-button:focus {
-  @apply bg-paragraph-color -translate-x-1 -translate-y-1 opacity-100;
+  @apply -translate-x-1 -translate-y-1 bg-paragraph-color opacity-100;
+}
+
+.sidebar {
+  @apply my-5 flex p-6;
+}
+.sidebar-reverse {
+  @apply my-5 flex flex-row-reverse p-6;
+}
+.sidebar-picture {
+  @apply w-1/2;
+}
+.sidebar-paragraph {
+  @apply flex w-1/2 flex-col justify-center p-4;
+}
+.sidebar-paragraph-title {
+  @apply px-4 py-2  text-center text-2xl;
+}
+.sidebar-paragraph-content {
+  @apply flex justify-center p-4 text-lg leading-7;
 }

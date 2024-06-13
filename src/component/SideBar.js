@@ -4,13 +4,13 @@ const SideBar = () => {
   return (
     <div>
       <div className="container-layout my-24">
-        <div className="my-5 flex p-6">
-          <div className="w-1/2">
+        <div className="sidebar">
+          <div className="side-bar-picture">
             <img src="images/life.jpg" alt="" className="w-full align-middle" />
           </div>
-          <div className="w-1/2 p-4">
-            <h3 className="px-4 py-2 text-center text-2xl">未來居住的創新</h3>
-            <p className="flex items-center justify-center p-4 text-lg leading-7">
+          <div className="side-paragraph">
+            <h3 className="sidebar-paragraph-title">未來居住的創新</h3>
+            <p className="side-bar-paragraph-content">
               智慧家庭技術正在改變我們的居住方式， 使家庭更智能、更節能。
               <br />
               透過智能冰箱和智能烤爐等設備， 這些技術不只增加日常便利，
@@ -19,19 +19,17 @@ const SideBar = () => {
             </p>
           </div>
         </div>
-        <div className="my-5 flex  flex-row-reverse p-6">
-          <div className="w-1/2">
+        <div className="sidebar-reverse">
+          <div className="sidebar-pic">
             <img
               src="images/space.jpg"
               alt=""
               className="w-full align-middle"
             />
           </div>
-          <div className="w-1/2 p-4">
-            <h3 className="px-4 py-2  text-center text-2xl">
-              打造舒適高效空間
-            </h3>
-            <p className="flex items-center justify-center p-4 text-lg leading-7">
+          <div className="side-bar-paragraph">
+            <h3 className="sidebar-paragraph-title">打造舒適高效空間</h3>
+            <p className="sidebar-paragraph-content">
               智慧家庭設計專注於融合最新科技來提升居住體驗。
               <br />
               自動窗簾、環境音響系統，以及遠程控制的安全設施，
@@ -40,17 +38,17 @@ const SideBar = () => {
             </p>
           </div>
         </div>
-        <div className="my-5 flex p-6">
-          <div className="w-1/2">
+        <div className="sidebar">
+          <div className="sidebar-picture">
             <img
               src="images/protect.jpg"
               alt=""
               className="w-full align-middle"
             />
           </div>
-          <div className="w-1/2 p-4">
-            <h3 className="px-4 py-2 text-center text-2xl">全面保護您的居所</h3>
-            <p className="flex items-center justify-center p-4 text-lg leading-7">
+          <div className="sidebar-paragraph">
+            <h3 className="sidebar-paragraph-title">全面保護您的居所</h3>
+            <p className="sidebar-paragraph-content">
               隨著科技進展，智慧家庭安全系統變得更加全面和精密。
               <br />
               從進階的運動感應器到全方位的監控攝影機，
@@ -59,19 +57,17 @@ const SideBar = () => {
             </p>
           </div>
         </div>
-        <div className="my-5 flex flex-row-reverse p-6">
-          <div className="w-1/2">
+        <div className="sidebar-reverse">
+          <div className="sidebar-picture">
             <img
               src="images/system.jpg"
               alt=""
               className="w-full align-middle"
             />
           </div>
-          <div className="flex w-1/2 flex-col justify-center p-4">
-            <h3 className="px-4 py-2  text-center text-2xl">
-              簡化生活的智能系統
-            </h3>
-            <p className="flex justify-center p-4 text-lg leading-7">
+          <div className="sidebar-paragraph">
+            <h3 className="sidebar-paragraph-title">簡化生活的智能系統</h3>
+            <p className="sidebar-paragraph-content">
               智慧家庭控制系統為家庭日常活動帶來前所未有的便利。
               <br />
               通過智能手機或語音命令，您可以輕鬆調節溫度、控制照明或是管理娛樂系統，享受科技帶來的輕鬆生活。
