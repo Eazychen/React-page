@@ -20,8 +20,8 @@ const FormComponent = () => {
         body: JSON.stringify(data),
       });
       const result = await response.json();
-      console.log(result);
       reset();
+      return result;
     } catch (error) {
       console.error("there was an error submitting the form", error);
     }

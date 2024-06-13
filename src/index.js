@@ -20,7 +20,7 @@ const routers = createBrowserRouter([
     element: <DefaultComponent {...{ Component: Services }} />,
   },
   {
-    path: "/smartappliances",
+    path: "/smartAppliances",
     element: <DefaultComponent {...{ Component: SmartAppliances }} />,
   },
 ]);

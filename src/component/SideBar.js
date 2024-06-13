@@ -6,11 +6,7 @@ const SideBar = () => {
       <div className="container-layout my-24">
         <div className="my-5 flex p-6">
           <div className="w-1/2">
-            <img
-              src="../../public/img/生活趨勢.jpeg"
-              alt=""
-              className="w-full align-middle"
-            />
+            <img src="images/life.jpg" alt="" className="w-full align-middle" />
           </div>
           <div className="w-1/2 p-4">
             <h3 className="px-4 py-2 text-center text-2xl">未來居住的創新</h3>
@@ -26,7 +22,7 @@ const SideBar = () => {
         <div className="my-5 flex  flex-row-reverse p-6">
           <div className="w-1/2">
             <img
-              src="https://picsum.photos/id/202/600/300"
+              src="images/space.jpg"
               alt=""
               className="w-full align-middle"
             />
@@ -47,15 +43,13 @@ const SideBar = () => {
         <div className="my-5 flex p-6">
           <div className="w-1/2">
             <img
-              src="https://picsum.photos/id/202/600/300"
+              src="images/protect.jpg"
               alt=""
               className="w-full align-middle"
             />
           </div>
           <div className="w-1/2 p-4">
-            <h3 className="px-4 py-2  text-center text-2xl">
-              全面保護您的居所
-            </h3>
+            <h3 className="px-4 py-2 text-center text-2xl">全面保護您的居所</h3>
             <p className="flex items-center justify-center p-4 text-lg leading-7">
               隨著科技進展，智慧家庭安全系統變得更加全面和精密。
               <br />
@@ -68,21 +62,19 @@ const SideBar = () => {
         <div className="my-5 flex flex-row-reverse p-6">
           <div className="w-1/2">
             <img
-              src="https://picsum.photos/id/202/600/300"
+              src="images/system.jpg"
               alt=""
               className="w-full align-middle"
             />
           </div>
-          <div className="w-1/2 p-4">
+          <div className="flex w-1/2 flex-col justify-center p-4">
             <h3 className="px-4 py-2  text-center text-2xl">
               簡化生活的智能系統
             </h3>
-            <p className="lg flex items-center justify-center p-4 leading-7">
+            <p className="flex justify-center p-4 text-lg leading-7">
               智慧家庭控制系統為家庭日常活動帶來前所未有的便利。
               <br />
-              通過智能手機或語音命令，您可以輕鬆調節溫度、控制照明，
-              <br />
-              或是管理娛樂系統，享受科技帶來的輕鬆生活。
+              通過智能手機或語音命令，您可以輕鬆調節溫度、控制照明或是管理娛樂系統，享受科技帶來的輕鬆生活。
             </p>
           </div>
         </div>
