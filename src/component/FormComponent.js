@@ -16,7 +16,7 @@ const FormComponent = () => {
       const response = await fetch(
         `${process.env.REACT_APP_API_URL}/api/submitForm`,
         {
-          method: "POST",
+          method: "post",
           headers: {
             "Content-type": "application/json",
           },
