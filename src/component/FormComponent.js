@@ -11,18 +11,15 @@ const FormComponent = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    const apiUrl = process.env.REACT_APP_API_URL;
     try {
-      console.log(process.env.REACT_APP_API_URL);
-      const response = await fetch(
-        `${process.env.REACT_APP_API_URL}/api/submitForm`,
-        {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(data),
+      const response = await fetch(`${apiUrl}/api/submitForm`, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
         },
-      );
+        body: JSON.stringify(data),
+      });
       console.log(response);
       const result = await response.json();
       reset();
