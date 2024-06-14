@@ -14,13 +14,15 @@ const FormComponent = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(`${apiUrl}/api/submitForm`, {
+      console.log(apiUrl);
+      const response = await fetch(`/api/submitForm`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",
         },
         body: JSON.stringify(data),
       });
+
       console.log(response);
       const result = await response.json();
       reset();
