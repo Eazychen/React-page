@@ -21,6 +21,7 @@ const FormComponent = () => {
         },
         body: JSON.stringify(data),
       });
+      console.log(response);
       const result = await response.json();
       reset();
       return result;
