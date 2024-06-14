@@ -2,6 +2,8 @@ import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 const FormComponent = () => {
   const {
     register,
@@ -12,8 +14,8 @@ const FormComponent = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch("/services", {
-        method: "post",
+      const response = await fetch(`${apiUrl}/api/submitForm`, {
+        method: "POST",
         headers: {
           "Content-type": "application/json",
         },
@@ -23,7 +25,7 @@ const FormComponent = () => {
       reset();
       return result;
     } catch (error) {
-      console.error("there was an error submitting the form", error);
+      console.log(error);
     }
   };
   const inputHandler = (e) => {
