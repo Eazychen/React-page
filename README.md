@@ -1,11 +1,14 @@
 # Page Project
 
-[![React Version](https://img.shields.io/badge/react-18.3.1-blue.svg)](https://reactjs.org/)
 [![Node Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)](https://reactrouter.com/)
+[![Netlify ](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://app.netlify.com)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 ## 項目概述
 
-這是一個為立明電器行創建的形象網站，使用 React 框架建立。本網站功能包括 LINE Robot 互動，用戶可以通過 LINE 進行互動；強大的表單處理功能，用於預約服務；以及與後端 API 的完整串接，保證數據同步和管理。此外，網站採用 Tailwind CSS 進行現代化的風格設計，提供用戶友好的互動體驗。
+這是一個為立明電器行創建的形象網站，使用 React 框架建立。本網站功能包括 LINE Robot 互動，用戶可以通過 LINE 進行互動；表單處理功能用於預約服務；以及與後端 API 的完整串接，保證數據同步和管理。此外，網站採用 Tailwind CSS 進行現代化的風格設計，提供用戶友好的互動體驗。
 
 ## 系統要求
 
