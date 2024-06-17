@@ -6,6 +6,17 @@ const LineRobotComponent = () => {
     try {
       const response = await axios.post(
         "https://limingelectronics-e60be4725b1d.herokuapp.com/api/webhook",
+        {
+          events: [
+            {
+              type: "message",
+              message: {
+                type: "text",
+                text: "Hello, this is a test message",
+              },
+            },
+          ],
+        },
       );
       console.log(response);
     } catch (err) {
