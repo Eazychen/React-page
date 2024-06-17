@@ -5,7 +5,7 @@ const LineRobotComponent = () => {
   const fetchMessages = async () => {
     try {
       const response = await axios.get(
-        "https://liming-electronics-e60be4725b1d.herokuapp.com/api/messages",
+        "https://limingelectronics-e60be4725b1d.herokuapp.com/api/messages",
       );
       console.log(response);
     } catch (err) {
