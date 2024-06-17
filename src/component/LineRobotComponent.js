@@ -2,7 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const LineRobotComponent = () => {
-  const [messages, setMessages] = useState([]);
   const fetchMessages = async () => {
     try {
       const response = await axios.get(
