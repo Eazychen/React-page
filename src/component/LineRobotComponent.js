@@ -5,18 +5,7 @@ const LineRobotComponent = () => {
   const fetchMessages = async () => {
     try {
       const response = await axios.post(
-        "https://limingelectronics-e60be4725b1d.herokuapp.com/app/webhook",
-        {
-          events: [
-            {
-              type: "message",
-              message: {
-                type: "text",
-                text: "Hello, this is a test message",
-              },
-            },
-          ],
-        },
+        "https://limingelectronics-e60be4725b1d.herokuapp.com/line/webhook",
       );
       console.log(response);
     } catch (err) {
