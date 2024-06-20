@@ -15,7 +15,7 @@
 }
 .nav-li-group:hover,
 .nav-li-group:focus {
-  @apply text-info -translate-y-2;
+  @apply text-info -translate-y-2 delay-300;
 }
 
 .footer {
