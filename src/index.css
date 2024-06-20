@@ -6,24 +6,16 @@
   @apply mx-56 px-6;
 }
 
-.nav {
-  @apply mx-56 grid grid-cols-[20%_80%] px-6;
-}
-.nav-ul {
-  @apply my-3  ml-auto flex items-center;
+.container-layout-md {
+  @apply md:mx-56 md:px-6;
 }
 
 .nav-li-group {
-  @apply cursor-pointer justify-between px-1 py-2 text-xl text-neutral-400;
+  @apply cursor-pointer text-xl lg:text-2xl;
 }
-
-.nav-li-group:nth-child(2),
-.nav-li-group:nth-child(3) {
-  @apply mx-2 cursor-pointer justify-between text-xl;
-}
-
-.nav-li-group:hover {
-  @apply -translate-y-2 rounded-md bg-gray-700 text-blue-normal shadow-md delay-300;
+.nav-li-group:hover,
+.nav-li-group:focus {
+  @apply text-info -translate-y-2;
 }
 
 .footer {
