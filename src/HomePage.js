@@ -10,8 +10,8 @@ const HomePage = ({ datas, serviceFeatureSectionDatas }) => {
     <div>
       <Header datas={datas} />
       <Swiper />
-      <MagazineLayout />
-      <FeatureSection serviceFeatureSectionDatas={serviceFeatureSectionDatas} />
+      {/* <MagazineLayout />
+      <FeatureSection serviceFeatureSectionDatas={serviceFeatureSectionDatas} /> */}
       <Footer datas={datas} />
     </div>
   );

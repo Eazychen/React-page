@@ -1,68 +1,46 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLine } from "react-icons/fa";
 
-const UlGroup = ({ datas, className }) => {
-  const navigate = useNavigate();
-  return (
-    <ul className={className.ul}>
-      {datas.map((data) => (
-        <li
-          className={className.liGroup}
-          key={data.id}
-          onClick={() => navigate(data.path, { state: "TW102324" })}
-        >
-          {data.title}
-        </li>
-      ))}
-    </ul>
-  );
-};
-
-const Footer = ({ datas }) => {
+const Footer = () => {
   return (
     <div>
-      <footer className="border-t-2 border-solid border-gray-300 bg-gray-100">
-        <div className="container-layout">
-          <div className="footer">
-            <div>
-              <h3 className="mb-3 text-4xl font-bold">Title</h3>
-              <ul className="flex justify-start">
-                <li className="footer-first-li">
-                  <FaInstagram size={20} color="#fff" />
-                </li>
-                <li className="footer-first-li mx-2">
-                  <FaFacebookF size={20} color="#fff" />
-                </li>
-                <li className="footer-first-li">
-                  <FaTiktok size={20} color="#fff" />{" "}
-                </li>
-              </ul>
-            </div>
-            <UlGroup
-              datas={datas}
-              className={{ ul: "px-2", liGroup: "footer-li" }}
-            />
-            <div className="px-2">
-              <ul className="text-lg">
-                <li className="footer-li">常見問題</li>
-                <li className="footer-li mt-1">服務條款</li>
-                <li className="footer-li mt-1">隱私權服務</li>
-              </ul>
-            </div>
-            <div className="mr-2 flex flex-col">
-              <label htmlFor="email">訂閱最新消息</label>
-              <div>
-                <input
-                  type="email"
-                  className="footer-input"
-                  placeholder="Email"
-                  id="email"
-                />
+      <footer className="border-t-2 border-solid border-gray-300 bg-base-100">
+        <div className="container-layout-md">
+          <div className="footer-group footer-group-md">
+            <div className="my-2 flex w-full justify-center md:w-1/3 md:justify-start">
+              <div
+                className="flex flex-col items-center p-2 md:items-start
+               md:py-2 md:pl-0"
+              >
+                <h3 className="mb-2 text-4xl font-bold">daisyUI</h3>
+                <ul className="flex justify-start py-2">
+                  <li className="footer-first-li">
+                    <FaInstagram size={25} color="#fff" />
+                  </li>
+                  <li className="footer-first-li mx-2">
+                    <FaFacebook size={25} color="#fff" />
+                  </li>
+                  <li className="footer-first-li">
+                    <FaLine size={25} color="#fff" />
+                  </li>
+                </ul>
               </div>
-              <button type="button" className="btn-dangerous">
-                訂閱
-              </button>
+            </div>
+            <div className="my-2 flex w-full justify-center md:w-1/3 md:justify-start">
+              <ul className="flex flex-col p-2">
+                <li className="footer-title text-xl">服務相關</li>
+                <li className="footer-li">關於我們</li>
+                <li className="footer-li">預約服務</li>
+                <li className="footer-li">智慧家居</li>
+                <li className="footer-li">聯絡我們</li>
+              </ul>
+            </div>
+            <div className="my-2 flex w-full justify-center md:w-1/3 md:justify-start">
+              <ul className="flex flex-col p-2">
+                <li className="footer-title text-xl">聯絡方式</li>
+                <li className="footer-li">電話:</li>
+                <li className="footer-li">地址:</li>
+              </ul>
             </div>
           </div>
         </div>

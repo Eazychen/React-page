@@ -24,18 +24,15 @@ const UlGroup = ({ datas, className }) => {
 
 const Header = ({ datas }) => {
   return (
-    <nav className="bg-base-100 fixed left-0 top-0 z-50 w-full">
-      <div className="container-layout-md flex items-center justify-center md:justify-between ">
-        <div className="p-2 text-center">
+    <nav className="fixed left-0 top-0 z-50 w-full bg-base-100">
+      <div className="container-layout-md flex items-center justify-center lg:my-2 lg:justify-between">
+        <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
+          <h2 className="flex items-center text-4xl">daisyUI</h2>
           <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost lg:hidden "
-            >
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-10 w-8 object-cover"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -52,19 +49,18 @@ const Header = ({ datas }) => {
               tabIndex={0}
               datas={datas}
               className={{
-                ul: "menu menu-md dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow",
-                liGroup: "nav-li-group",
+                ul: "menu dropdown-content menu-md z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow",
+                liGroup: "li-group ",
               }}
             />
           </div>
-          <h2 className="inline-flex p-2 text-3xl">daisyUI</h2>
         </div>
-        <div className="hidden lg:flex lg:justify-end">
+        <div className="hidden lg:flex lg:w-3/4 lg:justify-end">
           <UlGroup
             datas={datas}
             className={{
-              ul: "menu menu-lg flex flex-row flex-nowrap items-center p-2",
-              liGroup: "nav-li-group",
+              ul: "menu menu-lg flex flex-row items-center p-1",
+              liGroup: "li-group",
             }}
           />
         </div>

@@ -2,34 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-layout {
-  @apply mx-56 px-6;
-}
-
 .container-layout-md {
   @apply md:mx-56 md:px-6;
 }
 
-.nav-li-group {
+.li-group {
   @apply cursor-pointer text-xl lg:text-2xl;
 }
-.nav-li-group:hover,
-.nav-li-group:focus {
-  @apply text-info -translate-y-2 delay-300;
+.li-group:hover,
+.li-group:focus {
+  @apply -translate-y-2 text-info delay-300;
 }
 
-.footer {
-  @apply grid grid-cols-4  py-12;
+.footer-group {
+  @apply flex flex-col justify-center;
 }
+.footer-group-md {
+  @apply md:my-10 md:flex-row;
+}
+
 .footer-li {
-  @apply cursor-pointer text-lg;
+  @apply cursor-pointer py-1 text-base;
 }
 .footer-li:focus,
 .footer-li:hover {
   @apply text-blue-normal;
-}
-.footer-li:not(:first-child) {
-  @apply mt-1;
 }
 .footer-first-li {
   @apply cursor-pointer rounded-3xl bg-gray-500 p-2;
@@ -37,21 +34,7 @@
 .footer-first-li :hover {
   @apply opacity-80;
 }
-.footer-input {
-  @apply my-2 h-10 w-full rounded-md border-2 border-gray-400;
-}
 
-.footer-input:focus,
-.footer-input:hover {
-  @apply border-black;
-}
-.btn-dangerous {
-  @apply cursor-pointer rounded-md bg-red-500 px-1 py-2 text-white shadow-sm shadow-black;
-}
-.btn-dangerous:hover,
-.btn-dangerous:focus {
-  @apply -translate-y-1 bg-red-900;
-}
 .slide {
   @apply flex items-center justify-center;
 }
