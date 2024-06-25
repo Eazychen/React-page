@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .container-layout-md {
-  @apply md:mx-56 md:px-6;
+  @apply md:mx-20 md:px-6;
+}
+
+.container-layout-lg {
+  @apply lg:mx-56 lg:px-6;
 }
 
 .li-group {
@@ -18,7 +22,7 @@
   @apply flex flex-col justify-center;
 }
 .footer-group-md {
-  @apply md:my-10 md:flex-row;
+  @apply md:my-10 md:flex-row md:justify-between;
 }
 
 .footer-li {
