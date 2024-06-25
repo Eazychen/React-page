@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="container-layout-md">
+          <div className="container-layout-md mx-auto">
             <p className="text-balance py-3  text-center font-bold text-gray-500 md:text-center md:text-xl">
               Copyright &copy; 2023-2024 Li Ming Electronics All rights
               reserved.

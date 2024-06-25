@@ -20,7 +20,7 @@ const SwiperComponent = () => {
     >
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide max-h-swiper-silde">
+          <div className="slide">
             <img
               src="https://picsum.photos/id/237/800/300"
               alt=""
@@ -31,7 +31,7 @@ const SwiperComponent = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide max-h-swiper-silde">
+          <div className="slide">
             <img
               src="https://picsum.photos/id/232/800/300"
               alt=""
@@ -42,7 +42,7 @@ const SwiperComponent = () => {
       </SwiperSlide>
       <SwiperSlide>
         <Parallax speed={-10}>
-          <div className="slide max-h-swiper-silde">
+          <div className="slide">
             <img
               src="https://picsum.photos/id/234/800/300"
               alt=""
