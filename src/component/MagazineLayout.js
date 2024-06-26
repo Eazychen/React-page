@@ -5,30 +5,30 @@ const MagazineLayout = () => {
     <div>
       <div className="bg-gray-100">
         <div className="container-layout container-layout-lg container-layout-xl py-10">
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-4 md:grid-rows-4">
-            <div className="col-span-full md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-1">
+          <div className="magazine">
+            <div className="magazine-title-layout">
               <div className="flex h-full items-center justify-center md:rounded-l-3xl">
                 <h3 className="p-2 text-4xl tracking-widest text-indigo-600 md:text-6xl">
                   我們的理念
                 </h3>
               </div>
             </div>
-            <div className="md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-2">
-              <div className="flex h-full items-center justify-center rounded-xl  bg-amber-100 p-4 md:rounded-l-3xl">
+            <div className="magazine-slogan">
+              <div className="flex h-full items-center justify-center rounded-xl bg-amber-100 p-4 shadow-md md:rounded-l-3xl">
                 <h4 className="p-2 text-3xl tracking-widest text-indigo-400 md:text-5xl">
                   以人為本
                 </h4>
               </div>
             </div>
-            <div className="md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-3">
+            <div className="magazine-pic">
               <img
                 src="https://picsum.photos/id/202/600/300"
                 alt=""
-                className="h-full w-full object-cover"
+                className="magazine-pic-img"
               />
             </div>
-            <div className="md:col-span-3 md:col-start-2 md:row-span-1 md:row-start-4">
-              <div className="b flex h-full items-center justify-center rounded-r-xl bg-amber-100 p-4 md:rounded-r-3xl">
+            <div className="magazine-paragraph">
+              <div className="flex h-full items-center justify-center rounded-r-xl bg-amber-100 p-4 shadow-md md:rounded-r-3xl">
                 <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-700 md:text-2xl md:leading-10">
                   我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
                   <br />
@@ -49,22 +49,22 @@ const MagazineLayout = () => {
                 </h3>
               </div>
             </div>
-            <div className="md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-2">
-              <div className="flex h-full items-center justify-center rounded-xl  bg-amber-100 p-4 md:rounded-l-3xl">
+            <div className="magazine-slogan">
+              <div className="flex h-full items-center justify-center rounded-xl bg-amber-100 p-4 shadow-md md:rounded-l-3xl">
                 <h4 className="p-2 text-3xl tracking-widest text-blue-500 md:text-5xl">
                   細節至上
                 </h4>
               </div>
             </div>
-            <div className="md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-3">
+            <div className="magazine-pic">
               <img
                 src="https://picsum.photos/id/202/600/300"
                 alt=""
-                className="h-full w-full object-cover"
+                className="magazine-pic-img"
               />
             </div>
-            <div className="p-2 md:col-span-3 md:col-start-2 md:row-span-1 md:row-start-4">
-              <div className="flex h-full items-center justify-center rounded-r-xl  bg-amber-100 p-4 md:rounded-r-3xl">
+            <div className="magazine-paragraph">
+              <div className="flex h-full items-center justify-center rounded-r-xl bg-amber-100 p-4 shadow-md md:rounded-r-3xl">
                 <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-700 md:text-2xl md:leading-10">
                   我們特別注重施工的整潔與細節，這是我們與眾不同的關鍵。
                   <br />

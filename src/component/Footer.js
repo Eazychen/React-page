@@ -1,7 +1,9 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaLine } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <footer className="border-t-2 border-solid border-gray-300 bg-base-100">
@@ -44,10 +46,38 @@ const Footer = () => {
             <div className="my-2 flex w-full justify-center md:w-1/3">
               <ul className="flex flex-col p-1 xl:p-2">
                 <li className="footer-title text-center text-xl">服務相關</li>
-                <li className="footer-li text-center">關於我們</li>
-                <li className="footer-li text-center">預約服務</li>
-                <li className="footer-li text-center">智慧家居</li>
-                <li className="footer-li text-center">聯絡我們</li>
+                <li
+                  onClick={() => {
+                    navigate("/about");
+                  }}
+                  className="footer-li text-center"
+                >
+                  關於我們
+                </li>
+                <li
+                  onClick={() => {
+                    navigate("/services");
+                  }}
+                  className="footer-li text-center"
+                >
+                  預約服務
+                </li>
+                <li
+                  onClick={() => {
+                    navigate("/smartAppliances");
+                  }}
+                  className="footer-li text-center"
+                >
+                  智慧家居
+                </li>
+                <li
+                  onClick={() => {
+                    navigate("/contact");
+                  }}
+                  className="footer-li text-center"
+                >
+                  聯絡我們
+                </li>
               </ul>
             </div>
             <div className="my-2 flex w-full justify-center md:w-1/3">

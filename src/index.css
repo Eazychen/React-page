@@ -43,6 +43,25 @@
   @apply xl:opacity-80;
 }
 
+.magazine {
+  @apply grid grid-cols-1 gap-5 md:grid-cols-4 md:grid-rows-4;
+}
+.magazine-title-layout {
+  @apply col-span-full md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-1;
+}
+
+.magazine-slogan {
+  @apply md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-2;
+}
+.magazine-pic {
+  @apply md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-3;
+}
+.magazine-pic-img {
+  @apply h-full w-full overflow-hidden object-cover;
+}
+.magazine-paragraph {
+  @apply md:col-span-3 md:col-start-2 md:row-span-1 md:row-start-4;
+}
 .slide {
   @apply flex items-center justify-center;
 }
@@ -114,20 +133,20 @@
 }
 
 .sidebar {
-  @apply my-5 flex p-6;
+  @apply my-5 flex flex-col rounded-md bg-sky-50 md:flex-row md:p-6;
 }
 .sidebar-reverse {
-  @apply my-5 flex flex-row-reverse p-6;
+  @apply my-5 flex flex-col rounded-md bg-sky-50  md:flex-row-reverse md:p-6;
 }
 .sidebar-picture {
-  @apply w-1/2;
+  @apply mb-4 w-full overflow-hidden rounded-lg align-middle shadow-md md:mb-0 md:w-1/2;
 }
 .sidebar-paragraph {
-  @apply flex w-1/2 flex-col justify-center p-4;
+  @apply flex w-full flex-col justify-center p-2 md:w-1/2 md:p-4;
 }
 .sidebar-paragraph-title {
-  @apply px-4 py-2  text-center text-2xl;
+  @apply px-4 py-2  text-center text-2xl font-semibold text-sky-700 md:text-4xl;
 }
 .sidebar-paragraph-content {
-  @apply flex justify-center p-4 text-lg leading-7;
+  @apply flex justify-center break-words p-4 text-base leading-relaxed text-gray-600 md:text-left md:text-lg;
 }

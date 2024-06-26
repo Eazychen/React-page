@@ -5,7 +5,7 @@ import Footer from "./component/Footer";
 
 const Services = ({ datas, serviceFeatureSectionDatas }) => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Header
         datas={datas}
         serviceFeatureSectionDatas={serviceFeatureSectionDatas}

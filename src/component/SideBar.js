@@ -2,11 +2,15 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <div>
-      <div className="container-layout my-24">
+    <div className="bg-gray-100">
+      <div className="container-layout container-layout-lg container-layout-xl my-20 md:my-24">
         <div className="sidebar">
           <div className="sidebar-picture">
-            <img src="images/life.jpg" alt="" className="w-full align-middle" />
+            <img
+              src="images/life.jpg"
+              alt=""
+              className="h-auto w-full rounded-lg align-middle"
+            />
           </div>
           <div className="sidebar-paragraph">
             <h3 className="sidebar-paragraph-title">未來居住的創新</h3>
@@ -24,7 +28,7 @@ const SideBar = () => {
             <img
               src="images/space.jpg"
               alt=""
-              className="w-full align-middle"
+              className="h-auto w-full rounded-lg align-middle "
             />
           </div>
           <div className="sidebar-paragraph">
@@ -43,7 +47,7 @@ const SideBar = () => {
             <img
               src="images/protect.jpg"
               alt=""
-              className="w-full align-middle"
+              className="h-auto w-full rounded-lg align-middle"
             />
           </div>
           <div className="sidebar-paragraph">
@@ -62,7 +66,7 @@ const SideBar = () => {
             <img
               src="images/system.jpg"
               alt=""
-              className="w-full align-middle"
+              className="h-auto w-full align-middle"
             />
           </div>
           <div className="sidebar-paragraph">

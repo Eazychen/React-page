@@ -5,7 +5,7 @@ import SideBar from "./component/SideBar";
 
 const SmartAppliances = ({ datas }) => {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Header datas={datas} />
       <SideBar />
       <Footer datas={datas} />
