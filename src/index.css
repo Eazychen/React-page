@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.container-layout-md {
-  @apply md:mx-20 md:px-6;
+.container-layout {
+  @apply mx-5 px-2;
 }
 
 .container-layout-lg {
-  @apply lg:mx-56 lg:px-6;
+  @apply lg:mx-20 lg:px-6;
+}
+
+.container-layout-xl {
+  @apply xl:mx-56 xl:px-6;
 }
 
 .li-group {
@@ -15,7 +19,7 @@
 }
 .li-group:hover,
 .li-group:focus {
-  @apply -translate-y-2 text-info delay-300;
+  @apply xl:-translate-y-2 xl:text-info xl:delay-300;
 }
 
 .footer-group {
@@ -30,18 +34,19 @@
 }
 .footer-li:focus,
 .footer-li:hover {
-  @apply text-blue-normal;
+  @apply xl:text-blue-normal;
 }
 .footer-first-li {
   @apply cursor-pointer rounded-3xl bg-gray-500 p-2;
 }
 .footer-first-li :hover {
-  @apply opacity-80;
+  @apply xl:opacity-80;
 }
 
 .slide {
   @apply flex items-center justify-center;
 }
+
 .featuresectiontitle {
   @apply flex justify-center py-4;
 }

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="border-t-2 border-solid border-gray-300 bg-base-100">
-        <div className="container-layout-lg container-layout-md">
+        <div className="container-layout container-layout-lg container-layout-xl">
           <div className="footer-group footer-group-md">
             <div className="my-2 flex w-full justify-center md:w-1/3">
               <div className="flex flex-col items-center p-1 md:items-start xl:p-2">
@@ -67,8 +67,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-black">
-          <div className="container-layout-md mx-auto">
-            <p className="text-balance py-3  text-center font-bold text-gray-500 md:text-center md:text-xl">
+          <div className="container-layout-xl container-layout-lg  mx-auto">
+            <p className="text-balance py-3 text-center font-bold text-gray-500  md:text-xl">
               Copyright &copy; 2023-2024 Li Ming Electronics All rights
               reserved.
             </p>
