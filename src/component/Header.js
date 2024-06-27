@@ -27,7 +27,7 @@ const Header = ({ datas }) => {
     <nav className="fixed left-0 top-0 z-50 w-full bg-base-100">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:my-2 lg:justify-between">
         <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
-          <h2 className="flex items-center text-4xl">daisyUI</h2>
+          <h2 className="flex items-center p-2 text-4xl">daisyUI</h2>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -50,7 +50,7 @@ const Header = ({ datas }) => {
               datas={datas}
               className={{
                 ul: "menu dropdown-content menu-md z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow",
-                liGroup: "li-group ",
+                liGroup: "li-group",
               }}
             />
           </div>
@@ -59,7 +59,7 @@ const Header = ({ datas }) => {
           <UlGroup
             datas={datas}
             className={{
-              ul: "menu menu-lg flex flex-row items-center p-1",
+              ul: "menu menu-lg flex flex-row items-center p-2",
               liGroup: "li-group",
             }}
           />

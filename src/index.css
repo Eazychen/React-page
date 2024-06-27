@@ -104,34 +104,6 @@
   @apply right-0;
 }
 
-.form-label-required {
-  @apply flex w-1/3 items-center justify-end p-2 tracking-widest;
-}
-.form-label-required::after {
-  content: "*";
-  color: red;
-}
-
-.form-input {
-  @apply ml-1 w-1/3 border-2 border-solid border-gray-300 p-4 text-xl;
-}
-
-.form-input-error {
-  @apply w-1/3 border-2 border-solid border-red-500 p-4 text-xl delay-100;
-}
-.error-message {
-  @apply ml-2 flex w-1/4 items-center  text-xl text-red-500;
-}
-
-.form-button {
-  @apply flex w-1/5 items-center justify-center rounded-2xl bg-paragraph-color p-2 text-xl tracking-widest opacity-70 shadow-sm shadow-stone-950;
-}
-
-.form-button:hover,
-.form-button:focus {
-  @apply -translate-x-1 -translate-y-1 bg-paragraph-color opacity-100;
-}
-
 .sidebar {
   @apply my-5 flex flex-col rounded-md bg-sky-50 md:flex-row md:p-6;
 }
