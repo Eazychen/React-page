@@ -49,7 +49,7 @@ const Header = ({ datas }) => {
               tabIndex={0}
               datas={datas}
               className={{
-                ul: "menu dropdown-content menu-md z-[1] mt-3 w-52 rounded-box bg-base-100 p-2 shadow",
+                ul: "menu-xl menu dropdown-content -right-2/3 z-[1] mt-3 w-60 rounded-box bg-base-100 shadow",
                 liGroup: "li-group",
               }}
             />
