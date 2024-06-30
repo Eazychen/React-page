@@ -29,7 +29,7 @@ const MagazineLayout = () => {
             </div>
             <div className="magazine-paragraph">
               <div className="flex h-full items-center justify-center rounded-r-xl bg-amber-100 p-4 shadow-md md:rounded-r-3xl">
-                <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-700 md:text-2xl md:leading-10">
+                <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-600 md:text-2xl md:leading-10">
                   我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
                   <br />
                   自創立以來一直秉持著「以人為本」的核心理念，致力於為每一位顧客提供最優質的服務體驗。
@@ -65,10 +65,10 @@ const MagazineLayout = () => {
             </div>
             <div className="magazine-paragraph">
               <div className="flex h-full items-center justify-center rounded-r-xl bg-amber-100 p-4 shadow-md md:rounded-r-3xl">
-                <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-700 md:text-2xl md:leading-10">
+                <p className="break-words p-2 text-base leading-relaxed tracking-wider text-gray-600 md:text-2xl md:leading-10">
                   我們特別注重施工的整潔與細節，這是我們與眾不同的關鍵。
                   <br />
-                  在每一次的安裝和維修服務中我們都會確保工作現場的整潔，不留下任何灰塵或垃圾。
+                  在每一次的安裝和維修服務中我們都會確保工作現場的整潔，不會留下任何灰塵或垃圾。
                 </p>
               </div>
             </div>

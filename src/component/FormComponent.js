@@ -121,9 +121,7 @@ const FormComponent = () => {
                 }`}
                 {...register("service", { required: "請選擇服務" })}
               >
-                <option value="" disabled selected>
-                  請選擇服務
-                </option>
+                <option value="default">請選擇服務</option>
                 <option value="service1">家中電器維修</option>
                 <option value="service2">家電安裝服務</option>
                 <option value="service3">家電保養服務</option>
