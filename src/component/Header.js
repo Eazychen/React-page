@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const UlGroup = ({ datas, className }) => {
   const navigate = useNavigate();
@@ -7,13 +7,14 @@ const UlGroup = ({ datas, className }) => {
     <ul className={className.ul}>
       {datas.map((data) => (
         <li className={className.liGroup} key={data.id}>
-          <Link
+          <button
+            className="w-full"
             onClick={() => {
               navigate(data.path);
             }}
           >
             {data.title}
-          </Link>
+          </button>
         </li>
       ))}
     </ul>
