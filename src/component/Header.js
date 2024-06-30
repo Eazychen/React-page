@@ -1,21 +1,12 @@
 import React from "react";
-
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const UlGroup = ({ datas, className }) => {
-  const navigate = useNavigate();
   return (
     <ul className={className.ul}>
       {datas.map((data) => (
         <li className={className.liGroup} key={data.id}>
-          <button
-            className="p-2"
-            onClick={() => {
-              navigate(data.path);
-            }}
-          >
-            {data.title}
-          </button>
+          <Link to={data.path}>{data.title}</Link>
         </li>
       ))}
     </ul>

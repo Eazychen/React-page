@@ -29,11 +29,17 @@
   @apply md:my-10 md:flex-row md:justify-between;
 }
 
-.footer-li {
-  @apply cursor-pointer py-1 text-base;
+.footer-li-first {
+  @apply cursor-pointer;
 }
-.footer-li:focus,
-.footer-li:hover {
+
+.footer-li-first,
+.footer-li-second {
+  @apply py-1 text-base;
+}
+
+.footer-li-first:focus,
+.footer-li-first:hover {
   @apply xl:text-blue-normal;
 }
 .footer-first-li {

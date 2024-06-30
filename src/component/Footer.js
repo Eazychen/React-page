@@ -1,9 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaLine } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 
-const Footer = () => {
-  const navigate = useNavigate();
+const UlGroup = ({ datas, className }) => {
+  return (
+    <ul className={className.ul}>
+      {datas.map((data) => (
+        <li className={className.liGroup} key={data.id}>
+          <Link to={data.path}>{data.title}</Link>
+        </li>
+      ))}
+    </ul>
+  );
+};
+
+const Footer = ({ datas }) => {
   return (
     <div>
       <footer className="border-t-2 border-solid border-gray-300 bg-base-300">
@@ -43,50 +54,23 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="my-2 flex w-full justify-center md:w-1/3">
-              <ul className="flex flex-col p-1 xl:p-2">
-                <li className="footer-title text-center text-xl">服務相關</li>
-                <li
-                  onClick={() => {
-                    navigate("/about");
-                  }}
-                  className="footer-li text-center"
-                >
-                  關於我們
-                </li>
-                <li
-                  onClick={() => {
-                    navigate("/services");
-                  }}
-                  className="footer-li text-center"
-                >
-                  預約服務
-                </li>
-                <li
-                  onClick={() => {
-                    navigate("/smartAppliances");
-                  }}
-                  className="footer-li text-center"
-                >
-                  智慧家居
-                </li>
-                <li
-                  onClick={() => {
-                    navigate("/contact");
-                  }}
-                  className="footer-li text-center"
-                >
-                  聯絡我們
-                </li>
-              </ul>
+            <div className="my-2 flex w-full flex-col justify-center p-1 md:w-1/3 xl:p-2 ">
+              <h5 className="footer-title text-center text-xl">服務相關</h5>
+              <UlGroup
+                datas={datas}
+                className={{
+                  ul: "flex flex-col p-1 xl:p-2",
+                  liGroup: "footer-li-first text-center",
+                }}
+              />
             </div>
-            <div className="my-2 flex w-full justify-center md:w-1/3">
+            <div className="my-2 flex w-full flex-col p-1 md:w-1/3 xl:p-2">
+              <h5 className="footer-title text-center text-xl">聯絡方式</h5>
               <ul className="flex flex-col p-1 xl:p-2">
-                <li className="footer-title text-center text-xl">聯絡方式</li>
-                <li className="footer-li text-center">
+                <li className="footer-li-second text-center">
                   電話:<span className="ml-1 text-balance">0953-537-123</span>
                 </li>
-                <li className="footer-li text-center">
+                <li className="footer-li-second text-center">
                   地址:
                   <span className="ml-1 text-balance">
                     412台中市大里區立仁路42-7號
