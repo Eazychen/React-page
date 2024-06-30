@@ -28,7 +28,7 @@ const Header = ({ datas }) => {
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:my-2 lg:justify-between">
         <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
           <h2 className="flex items-center p-2 text-4xl">daisyUI</h2>
-          <div className="z-999 dropdown">
+          <div className="dropdown">
             <div
               tabIndex={0}
               role="button"
@@ -57,7 +57,7 @@ const Header = ({ datas }) => {
                 tabIndex={0}
                 datas={datas}
                 className={{
-                  ul: "menu-xl menu dropdown-content -right-2/3 z-[1] mt-3 w-64 rounded-box bg-base-100 p-2 shadow md:w-72",
+                  ul: "menu-xl menu dropdown-content -right-2/3 z-50 mt-3 w-64 rounded-box bg-base-100 p-2 shadow md:w-72",
                   liGroup: "li-group",
                 }}
                 onClick={() => setIsOpen(false)}

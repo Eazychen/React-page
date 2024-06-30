@@ -15,7 +15,7 @@
 }
 
 .li-group {
-  @apply w-full cursor-pointer text-xl lg:text-2xl xl:w-1/4;
+  @apply w-full cursor-pointer text-xl lg:w-1/4 lg:text-2xl;
 }
 .li-group:hover,
 .li-group:focus {
