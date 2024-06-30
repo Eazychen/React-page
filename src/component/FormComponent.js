@@ -1,6 +1,8 @@
 import React from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const FormComponent = () => {
   const {
@@ -10,6 +12,7 @@ const FormComponent = () => {
     reset,
   } = useForm();
 
+  const MySwal = withReactContent(Swal);
   const onSubmit = async (data) => {
     const apiUrl = process.env.REACT_APP_API_URL;
     try {
@@ -23,9 +26,22 @@ const FormComponent = () => {
       console.log(response);
       const result = await response.json();
       reset();
+
+      MySwal.fire({
+        icon: "success",
+        title: "提交成功!",
+        text: "我們將盡快與您聯繫",
+        confirmButtonColor: "#3085d6",
+      });
       return result;
     } catch (error) {
       console.log(error);
+      MySwal.fire({
+        icon: "error",
+        title: "提交失敗",
+        text: "請稍後再試或聯繫客服0953-537-123",
+        confirmButtonColor: "#d33",
+      });
     }
   };
   const inputHandler = (e) => {
