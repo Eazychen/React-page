@@ -18,6 +18,9 @@ module.exports = {
         "brown-normal": "#5f2f14",
         "blue-normal": "#1297bd",
       },
+      zIndex: {
+        999: "999",
+      },
     },
   },
   plugins: [require("daisyui")],

@@ -1,12 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const UlGroup = ({ datas, className }) => {
+  const navigate = useNavigate();
   return (
     <ul className={className.ul}>
       {datas.map((data) => (
         <li className={className.liGroup} key={data.id}>
-          <Link to={data.path}>{data.title}</Link>
+          <Link
+            onClick={() => {
+              navigate(data.path);
+            }}
+          >
+            {data.title}
+          </Link>
         </li>
       ))}
     </ul>
@@ -20,7 +27,7 @@ const Header = ({ datas }) => {
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:my-2 lg:justify-between">
         <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
           <h2 className="flex items-center p-2 text-4xl">daisyUI</h2>
-          <div className="dropdown z-50">
+          <div className="z-999 dropdown">
             <div
               tabIndex={0}
               role="button"
