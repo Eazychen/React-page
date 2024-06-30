@@ -8,12 +8,26 @@ const FormComponent = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
     reset,
-  } = useForm();
+  } = useForm({ mode: "onChange" });
 
   const MySwal = withReactContent(Swal);
+
   const onSubmit = async (data) => {
+    console.log("Is valid:", isValid);
+    // 檢查是否有任何驗證錯誤
+    if (!isValid) {
+      // 檢查是否有任何驗證錯誤
+      MySwal.fire({
+        icon: "error",
+        title: "表單驗證失敗",
+        text: "請檢查並正確填寫所有必填欄位",
+        confirmButtonColor: "#d33",
+      });
+      return;
+    }
+
     const apiUrl = process.env.REACT_APP_API_URL;
     try {
       const response = await fetch(`${apiUrl}/api/submitForm`, {
@@ -71,10 +85,10 @@ const FormComponent = () => {
               客戶姓名：
             </label>
             <input
-              type="tel"
-              id="tel"
+              type="text"
+              id="name"
               className={`w-full rounded-lg px-3 py-2 text-base outline-none transition-colors duration-200 ease-in-out ${
-                errors.phone
+                errors.name
                   ? "border-2 border-red-500"
                   : "border-2 border-gray-600 hover:border-blue-600 focus:border-blue-600"
               }`}
@@ -83,7 +97,7 @@ const FormComponent = () => {
               onKeyDown={keyDownHandler}
               {...register("name", { required: "請輸入姓名" })}
             />
-            {errors.phone && (
+            {errors.name && (
               <p className="mt-1 text-sm text-red-500">{errors.name.message}</p>
             )}
           </div>
@@ -137,7 +151,7 @@ const FormComponent = () => {
                 }`}
                 {...register("service", { required: "請選擇服務" })}
               >
-                <option value="default">請選擇服務</option>
+                <option value="">請選擇服務</option>
                 <option value="service1">家中電器維修</option>
                 <option value="service2">家電安裝服務</option>
                 <option value="service3">家電保養服務</option>
