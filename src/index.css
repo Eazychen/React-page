@@ -21,7 +21,9 @@
 .li-group:focus {
   @apply xl:-translate-y-2 xl:text-info xl:delay-300;
 }
-
+.dropdown-item:focus {
+  outline: 2px solid #007bff;
+}
 .footer-group {
   @apply flex flex-col justify-center;
 }
