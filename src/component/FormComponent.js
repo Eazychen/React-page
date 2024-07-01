@@ -8,26 +8,13 @@ const FormComponent = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors, isValid, isSubmitting },
     reset,
   } = useForm({ mode: "onChange" });
 
   const MySwal = withReactContent(Swal);
 
   const onSubmit = async (data) => {
-    console.log("Is valid:", isValid);
-    // 檢查是否有任何驗證錯誤
-    if (!isValid) {
-      // 檢查是否有任何驗證錯誤
-      MySwal.fire({
-        icon: "error",
-        title: "表單驗證失敗",
-        text: "請檢查並正確填寫所有必填欄位",
-        confirmButtonColor: "#d33",
-      });
-      return;
-    }
-
     const apiUrl = process.env.REACT_APP_API_URL;
     try {
       const response = await fetch(`${apiUrl}/api/submitForm`, {
@@ -37,7 +24,6 @@ const FormComponent = () => {
         },
         body: JSON.stringify(data),
       });
-      console.log(response);
       const result = await response.json();
       MySwal.fire({
         icon: "success",
@@ -45,7 +31,6 @@ const FormComponent = () => {
         text: "我們將盡快與您聯繫",
         confirmButtonColor: "#3085d6",
       });
-      reset();
       return result;
     } catch (error) {
       console.log(error);
@@ -55,6 +40,8 @@ const FormComponent = () => {
         text: "請稍後再試或聯繫客服0953-537-123",
         confirmButtonColor: "#d33",
       });
+    } finally {
+      reset();
     }
   };
   const inputHandler = (e) => {
@@ -173,20 +160,29 @@ const FormComponent = () => {
             )}
           </div>
           <div className="flex justify-center p-4">
-            <button type="submit" className="btn btn-primary">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={!isValid || isSubmitting}
+            >
               送出
               <FaTelegramPlane />
             </button>
           </div>
           <div className="my-8 w-full max-w-md text-center text-sm text-gray-600">
-            <h5 className="p-2 font-semibold text-gray-700">注意事項：</h5>
-            <ul className="space-y-1 p-2">
-              <li>我們將在 24 小時內與您聯繫確認預約</li>
-              <li>如需取消預約，請提前 4 小時通知我們</li>
-              <li>服務時間為週一至週六 9:00-18:00</li>
-              <li>您的個人信息將受到嚴格保護</li>
-            </ul>
-            <p className="p-2 italic">如有任何疑問，請撥打專線0953-537-123</p>
+            <h5 className="p-2 text-lg font-semibold text-red-400">
+              注意事項：
+            </h5>
+            <p className="space-y-1 p-2">
+              <div className="p-1">表單內容須確實填寫，方便我方與您聯繫</div>
+              <div className="p-1">我們將在 24 小時內與您聯繫確認預約</div>
+              <div className="p-1">如需取消預約，請提前 4 小時通知我們</div>
+              <div className="p-1">服務時間為週一至週六 9:00-18:00</div>
+              <div className="p-1">您的個人信息將受到嚴格保護</div>
+            </p>
+            <p className="p-2 italic text-red-600">
+              如有任何疑問，請撥打專線0953-537-123
+            </p>
           </div>
         </form>
       </div>
