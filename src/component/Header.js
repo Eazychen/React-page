@@ -25,7 +25,7 @@ const Header = ({ datas }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-base-100">
-      <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:my-2 lg:justify-between">
+      <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
         <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
           <h2 className="flex items-center p-2 text-4xl">daisyUI</h2>
           <div className="dropdown">

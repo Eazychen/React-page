@@ -17,10 +17,12 @@
 .li-group {
   @apply w-full cursor-pointer text-xl lg:w-1/4 lg:text-2xl;
 }
+
 .li-group:hover,
 .li-group:focus {
-  @apply xl:-translate-y-2 xl:text-info xl:delay-300;
+  @apply text-blue-normal xl:-translate-y-2 xl:text-info xl:delay-300;
 }
+
 .dropdown-item:focus {
   outline: 2px solid #007bff;
 }
@@ -51,26 +53,6 @@
   @apply xl:opacity-80;
 }
 
-.magazine {
-  @apply grid grid-cols-1 gap-5 md:grid-cols-4 md:grid-rows-4;
-}
-.magazine-title-layout {
-  @apply col-span-full md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-1;
-}
-
-.magazine-slogan {
-  @apply md:col-span-2 md:col-start-1 md:row-span-1 md:row-start-2;
-}
-.magazine-pic {
-  @apply md:col-span-2 md:col-start-2 md:row-span-1 md:row-start-3;
-}
-.magazine-pic-img {
-  @apply h-full w-full overflow-hidden object-cover;
-}
-.magazine-paragraph {
-  @apply md:col-span-3 md:col-start-2 md:row-span-1 md:row-start-4;
-}
-
 .slide {
   @apply flex items-center justify-center;
 }
@@ -91,14 +73,14 @@
   @apply px-4 py-2  text-center text-2xl font-semibold text-sky-700 md:text-4xl;
 }
 .sidebar-paragraph-content {
-  @apply flex justify-center break-words p-4 text-base leading-relaxed text-gray-600 md:text-left md:text-lg;
+  @apply flex justify-center break-words p-2 text-center text-base leading-relaxed text-gray-600 md:text-left md:text-lg;
 }
 
 .feature-section-title {
   @apply flex justify-center py-4 text-4xl md:text-6xl;
 }
 .service {
-  @apply relative flex w-full flex-col justify-center py-10 lg:flex-row;
+  @apply relative flex w-full flex-col justify-center py-5 md:my-20 lg:flex-row;
 }
 .service:nth-child(even) {
   @apply lg:flex-row-reverse;
@@ -111,13 +93,13 @@
 }
 
 .service-paragraph {
-  @apply relative z-10 mt-4 w-full rounded-xl bg-paragraph-color p-6 tracking-widest text-white opacity-90 lg:absolute lg:top-1/2 lg:mt-0 lg:w-1/2 lg:-translate-y-1/2 lg:p-10;
+  @apply relative z-10 w-full -translate-y-1/3 rounded-xl bg-paragraph-color p-6 tracking-widest text-white opacity-90 lg:absolute lg:top-1/2 lg:mt-0 lg:w-1/2 lg:p-10;
 }
 .service-paragraph h4 {
-  @apply p-2 text-2xl lg:text-3xl;
+  @apply p-2 text-2xl md:text-4xl;
 }
 .service-paragraph p {
-  @apply break-words p-2 text-base leading-7 lg:text-xl lg:leading-10;
+  @apply break-words p-2 text-base leading-7 md:text-xl lg:leading-10;
 }
 .service:nth-child(odd) .service-paragraph {
   @apply lg:left-0;
