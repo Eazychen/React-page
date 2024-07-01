@@ -39,14 +39,13 @@ const FormComponent = () => {
       });
       console.log(response);
       const result = await response.json();
-      reset();
-
       MySwal.fire({
         icon: "success",
         title: "提交成功!",
         text: "我們將盡快與您聯繫",
         confirmButtonColor: "#3085d6",
       });
+      reset();
       return result;
     } catch (error) {
       console.log(error);
