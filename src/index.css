@@ -70,46 +70,9 @@
 .magazine-paragraph {
   @apply md:col-span-3 md:col-start-2 md:row-span-1 md:row-start-4;
 }
+
 .slide {
   @apply flex items-center justify-center;
-}
-
-.featuresectiontitle {
-  @apply flex justify-center py-4;
-}
-.service {
-  @apply relative flex w-full justify-center py-10;
-}
-.service:nth-child(even) {
-  @apply flex-row-reverse;
-}
-
-.service-pic {
-  @apply w-3/4 bg-gray-300;
-}
-
-.service-pic img {
-  @apply h-full  w-full object-cover;
-}
-
-.service-paragraph {
-  @apply absolute top-1/2 z-10 w-1/2 -translate-y-1/2 rounded-xl bg-paragraph-color  p-10 tracking-widest text-white opacity-90;
-}
-
-.service-paragraph h4 {
-  @apply p-2 text-3xl;
-}
-
-.service-paragraph p {
-  @apply break-all p-2 text-xl leading-10;
-}
-
-.service:nth-child(odd) .service-paragraph {
-  @apply left-0;
-}
-
-.service:nth-child(even) .service-paragraph {
-  @apply right-0;
 }
 
 .sidebar {
@@ -129,4 +92,36 @@
 }
 .sidebar-paragraph-content {
   @apply flex justify-center break-words p-4 text-base leading-relaxed text-gray-600 md:text-left md:text-lg;
+}
+
+.feature-section-title {
+  @apply flex justify-center py-4 text-4xl md:text-6xl;
+}
+.service {
+  @apply relative flex w-full flex-col justify-center py-10 lg:flex-row;
+}
+.service:nth-child(even) {
+  @apply lg:flex-row-reverse;
+}
+.service-pic {
+  @apply w-full lg:w-3/4;
+}
+.service-pic img {
+  @apply h-64 w-full object-cover lg:h-full;
+}
+
+.service-paragraph {
+  @apply relative z-10 mt-4 w-full rounded-xl bg-paragraph-color p-6 tracking-widest text-white opacity-90 lg:absolute lg:top-1/2 lg:mt-0 lg:w-1/2 lg:-translate-y-1/2 lg:p-10;
+}
+.service-paragraph h4 {
+  @apply p-2 text-2xl lg:text-3xl;
+}
+.service-paragraph p {
+  @apply break-words p-2 text-base leading-7 lg:text-xl lg:leading-10;
+}
+.service:nth-child(odd) .service-paragraph {
+  @apply lg:left-0;
+}
+.service:nth-child(even) .service-paragraph {
+  @apply lg:right-0;
 }
