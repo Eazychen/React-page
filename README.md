@@ -8,7 +8,11 @@
 
 ## 項目概述
 
-這是一個為立明電器行創建的形象網站，使用 React 框架建立。本網站功能包括 LINE Robot 互動，用戶可以通過 LINE 進行互動；表單處理功能用於預約服務；以及與後端 API 的完整串接，保證數據同步和管理。此外，網站採用 Tailwind CSS 進行現代化的風格設計，提供用戶友好的互動體驗。並使用 Netlify 部署。
+這是一個為立明電器行創建的形象網站，使用 React 框架建立。
+本網站功能包括 LINE Robot 互動，用戶可以通過 LINE 進行互動；表單處理功能用於預約服務；
+以及與後端 API 的完整串接，保證數據同步和管理。
+此外，網站採用 Tailwind CSS 與 DaisyUI 進行現代化的風格設計，提供用戶友好的互動體驗。
+並使用 Netlify 部署。
 
 ## 系統要求
 
@@ -46,6 +50,10 @@
 - React Hook Form
 - React Icons
 - React Scroll Parallax
+- React-intersection-observer
+- SweetAlert2
+- Framer-Motion
+-
 
 ## 作者
 
