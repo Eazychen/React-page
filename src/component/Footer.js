@@ -64,15 +64,15 @@ const Footer = ({ datas }) => {
                 }}
               />
             </div>
-            <div className="my-2 flex w-full flex-col md:w-1/3">
+            <div className="my-2 flex w-full flex-col p-1 md:w-1/3 xl:p-2">
               <h5 className="footer-title text-center text-xl">聯絡方式</h5>
-              <ul className="flex flex-col p-1">
+              <ul className="flex flex-col  p-1">
                 <li className="footer-li-second text-center">
                   電話:<span className="ml-1 text-balance">0953-537-123</span>
                 </li>
                 <li className="footer-li-second text-center">
                   地址:
-                  <span className="ml-1">412台中市大里區立仁路42-7號</span>
+                  <span className="ml-1">台中市大里區立仁路42-7號</span>
                 </li>
               </ul>
             </div>

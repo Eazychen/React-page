@@ -38,7 +38,7 @@
 }
 
 .footer-li-second {
-  @apply p-1 text-sm;
+  @apply mb-2 text-sm;
 }
 
 .footer-li-first:focus,

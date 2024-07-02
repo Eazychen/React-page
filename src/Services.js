@@ -3,18 +3,12 @@ import FormComponent from "./component/FormComponent";
 import Header from "./component/Header";
 import Footer from "./component/Footer";
 
-const Services = ({ datas, serviceFeatureSectionDatas }) => {
+const Services = ({ datas }) => {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header
-        datas={datas}
-        serviceFeatureSectionDatas={serviceFeatureSectionDatas}
-      />
+      <Header datas={datas} />
       <FormComponent />
-      <Footer
-        datas={datas}
-        serviceFeatureSectionDatas={serviceFeatureSectionDatas}
-      />
+      <Footer datas={datas} />
     </div>
   );
 };
