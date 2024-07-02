@@ -35,15 +35,15 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
         }}
       >
         <div className="hero-overlay bg-opacity-70"></div>
-        <div className="hero-content text-center text-white opacity-80">
+        <div className="hero-content  text-white opacity-80">
           <div className="w-full">
-            <h3 className="mb-5 text-2xl font-bold md:text-3xl lg:text-4xl">
+            <h3 className="mb-5 text-center text-2xl font-bold md:text-3xl lg:text-4xl">
               {title}
             </h3>
-            <p className="mb-5 text-lg text-red-600 md:text-xl lg:text-2xl">
+            <p className="mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl">
               {subtitle}
             </p>
-            <p className="mb-5 break-words text-xs md:text-base xl:text-lg">
+            <p className="mb-5 whitespace-pre-line break-words p-2 text-xs md:text-center md:text-base xl:text-lg ">
               {content}
             </p>
           </div>
@@ -66,15 +66,14 @@ const HeroSection = () => {
         title="我們的理念"
         subtitle="以人為本"
         content={`我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
-        我們自創立以來一直秉持著「以人為本」的核心理念，
-        並致力於為每一位顧客提供最優質的服務體驗。`}
+        我們自創立以來秉持著「以人為本」的核心理念，並致力於為每一位顧客提供最優質的服務體驗。`}
       />
       <AnimatedSection
         imgUrl="images/clean.png"
         title="我們的堅持"
         subtitle="細節至上"
-        content={`我們特別注重施工的整潔與細節，這是我們與眾不同的關鍵。
-        在每一次的安裝和維修服務中我都會確保工作現場的整潔，並避免留下任何灰塵或垃圾。`}
+        content={`我們特別注重施工整潔與細節，這是我們與眾不同的關鍵。
+        在每一次安裝和維修服務中都會確保工作現場的整潔，並避免留下任何灰塵或垃圾。`}
         reverse
       />
     </div>
