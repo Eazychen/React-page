@@ -5,7 +5,7 @@ const FeatureSection = ({ serviceFeatureSectionDatas }) => {
     <div className="bg-grey-color py-10">
       <div className="container-layout container-layout-lg content-layout-xl">
         <div className="feature-section-title">
-          <h3 className="p-3 text-6xl text-blue-600">相關服務</h3>
+          <h3 className="p-3 text-5xl text-blue-600">相關服務</h3>
         </div>
         {serviceFeatureSectionDatas.map((data, index) => {
           return (
