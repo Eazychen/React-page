@@ -1,9 +1,39 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  const animationVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+      rotate: reverse ? 10 : -10,
+      y: reverse ? 100 : -100,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      rotate: 0,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
   return (
-    <div className={reverse ? "sidebar-reverse" : "sidebar"}>
+    <motion.div
+      ref={ref}
+      className={reverse ? "sidebar-reverse" : "sidebar"}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      variants={animationVariants}
+    >
       <div className="sidebar-picture">
         <img
           src={imgUrl}
@@ -15,7 +45,7 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
         <h3 className="sidebar-paragraph-title">{title}</h3>
         <p className="sidebar-paragraph-content">{content}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -25,8 +55,9 @@ const SideBar = () => {
       imgUrl: "images/life.jpg",
       imgAlt: "life",
       title: "未來居住的創新",
-      content: `智慧家庭技術正在改變我們的居住方式，使家庭更智能、更節能。
-                透過智能冰箱和智能烤爐等設備，這些技術不只增加日常便利，同時也幫助家庭有效管理能源消耗，進而降低環境負擔。`,
+      content: `智慧家庭技術正在改變我們的居住方式，使家庭更智能跟節能。
+                透過智能冰箱和智能烤爐等設備，這些技術不只增加日常便利。
+                同時也幫助家庭有效管理能源消耗，進而降低環境負擔。`,
       reverse: false,
     },
     {
@@ -34,7 +65,7 @@ const SideBar = () => {
       imgAlt: "space",
       title: "打造舒適高效空間",
       content: `智慧家庭設計專注於融合最新科技來提升居住體驗。
-                自動窗簾、環境音響系統，以及遠程控制的安全設施，均旨在創造一個便捷和舒適的家庭環境。`,
+                自動窗簾、環境音響系統，以及遠程控制的安全設施，均旨在打造一個便利和舒適的居家環境。`,
       reverse: true,
     },
     {
@@ -42,16 +73,15 @@ const SideBar = () => {
       imgAlt: "protect",
       title: "全面保護您的居所",
       content: `隨著科技進展，智慧家庭安全系統變得更加全面和精密。
-                從進階的運動感應器到全方位的監控攝影機，這些高科技設備確保您的家園時刻安全。`,
+                從進階的運動感應器到全方位的監控攝影機，這些高科技設備確保您的居家時刻安全。`,
       reverse: false,
     },
     {
       imgUrl: "images/system.jpg",
       imgAlt: "system",
       title: "簡化生活的智能系統",
-      content: `智慧家庭控制系統為家庭日常活動帶來前所未有的便利。
-                通過智能手機或語音命令，您可以輕鬆調節溫度、控制照明或是管理娛樂系統，
-                享受科技帶來的輕鬆生活。`,
+      content: `智慧家庭控制系統為居家日常活動帶來前所未有的便利。
+                通過手機或語音命令，您可以輕鬆調節溫度、控制照明或是管理娛樂系統，享受科技帶來的輕鬆生活。`,
       reverse: true,
     },
   ];
