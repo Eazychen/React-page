@@ -26,7 +26,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
-      className="container-layout container-layout-lg container-layout-xl my-5"
+      className="container-layout container-layout-lg container-layout-xl my-10"
     >
       <div
         className="hero min-h-[60vh] bg-cover bg-center lg:min-h-[50vh] xl:min-h-screen "
@@ -35,7 +35,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
         }}
       >
         <div className="hero-overlay bg-opacity-70"></div>
-        <div className="hero-content  text-white opacity-80">
+        <div className="hero-content text-white opacity-80">
           <div className="w-full">
             <h3 className="mb-5 text-center text-2xl font-bold md:text-3xl lg:text-4xl">
               {title}
