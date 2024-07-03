@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 
 const UlGroup = ({ datas, className }) => {
-  const navigate = useNavigate();
   return (
     <ul className={className.ul}>
       {datas.map((data) => (
-        <li className={className.liGroup} key={data.id}>
-          <button
-            className="w-full"
-            onClick={() => {
-              navigate(data.path);
-            }}
-          >
+        <motion.li
+          className={className.liGroup}
+          key={data.id}
+          whileHover={{ scale: 1.05, color: "#3B82F6" }}
+          whileTap={{ scale: 0.95, color: "#2563EB" }}
+          transition={{ duration: 0.2 }}
+        >
+          <Link to={data.path} className="block w-full">
             {data.title}
-          </button>
-        </li>
+          </Link>
+        </motion.li>
       ))}
     </ul>
   );
@@ -24,18 +25,14 @@ const UlGroup = ({ datas, className }) => {
 const Header = ({ datas }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full bg-base-100">
+    <nav className="fixed left-0 top-0 z-50 w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
-        <div className="flex justify-center p-2 text-center md:justify-between lg:w-1/4">
-          <h2 className="flex items-center p-2 text-4xl">daisyUI</h2>
-          <div className="dropdown">
-            <div
-              tabIndex={0}
-              role="button"
+        <div className="flex justify-center text-center md:justify-between lg:w-1/4">
+          <h2 className="flex items-center py-4 text-4xl">daisyUI</h2>
+          <div className="dropdown px-2 py-4">
+            <motion.button
               className="btn btn-ghost lg:hidden"
               onClick={() => setIsOpen(!isOpen)}
-              aria-haspopup="true"
-              aria-expanded={isOpen}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,18 +48,7 @@ const Header = ({ datas }) => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
-            </div>
-            {isOpen && (
-              <UlGroup
-                tabIndex={0}
-                datas={datas}
-                className={{
-                  ul: "menu-xl menu dropdown-content -right-2/3 z-50 mt-3 w-64 rounded-box bg-base-100 p-2 shadow md:w-72",
-                  liGroup: "li-group",
-                }}
-                onClick={() => setIsOpen(false)}
-              />
-            )}
+            </motion.button>
           </div>
         </div>
         <div className="hidden lg:flex lg:w-3/4 lg:justify-end">
@@ -70,11 +56,30 @@ const Header = ({ datas }) => {
             datas={datas}
             className={{
               ul: "menu menu-lg flex flex-row items-center p-2",
-              liGroup: "li-group",
+              liGroup: "py-2 text-gray-400",
             }}
           />
         </div>
       </div>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="lg:hidden"
+          >
+            <UlGroup
+              datas={datas}
+              className={{
+                ul: "space-y-1 px-2 pb-3 pt-2 sm:px-3",
+                liGroup:
+                  "block rounded-md py-2 text-center text-xl font-medium text-gray-400",
+              }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
