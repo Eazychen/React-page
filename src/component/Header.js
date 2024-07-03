@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const UlGroup = ({ datas, className }) => {
+const UlGroup = ({ datas, className, isMobile }) => {
   return (
     <ul className={className.ul}>
       {datas.map((data) => (
         <motion.li
-          className={className.liGroup}
+          className={`${className.liGroup}  
+          ${isMobile ? "rounded-md active:border-2 active:border-solid active:border-blue-500" : ""}`}
           key={data.id}
           whileHover={{ scale: 1.05, color: "#3B82F6" }}
           whileTap={{ scale: 0.95, color: "#2563EB" }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 1 }}
         >
           <Link to={data.path} className="block w-full">
             {data.title}
@@ -24,6 +25,7 @@ const UlGroup = ({ datas, className }) => {
 
 const Header = ({ datas }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
@@ -32,7 +34,8 @@ const Header = ({ datas }) => {
           <div className="dropdown px-2 py-4">
             <motion.button
               className="btn btn-ghost lg:hidden"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={toggleMenu}
+              whileTap={{ scale: 0.95 }}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,6 +61,7 @@ const Header = ({ datas }) => {
               ul: "menu menu-lg flex flex-row items-center p-2",
               liGroup: "py-2 text-gray-400",
             }}
+            isMobile={false}
           />
         </div>
       </div>
@@ -73,9 +77,10 @@ const Header = ({ datas }) => {
               datas={datas}
               className={{
                 ul: "space-y-1 px-2 pb-3 pt-2 sm:px-3",
-                liGroup:
-                  "block rounded-md py-2 text-center text-xl font-medium text-gray-400",
+                liGroup: "py-2 text-center text-xl font-medium text-gray-400",
               }}
+              onClick={toggleMenu}
+              isMobile={true}
             />
           </motion.div>
         )}
