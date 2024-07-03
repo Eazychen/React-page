@@ -12,7 +12,7 @@ const UlGroup = ({ datas, className, isMobile }) => {
           key={data.id}
           whileHover={{ scale: 1.05, color: "#3B82F6" }}
           whileTap={{ scale: 0.95, color: "#2563EB" }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.5 }}
         >
           <Link to={data.path} className="block w-full">
             {data.title}
@@ -25,13 +25,14 @@ const UlGroup = ({ datas, className, isMobile }) => {
 
 const Header = ({ datas }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <nav className="fixed left-0 top-0 z-50 w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
-        <div className="flex justify-center text-center md:justify-between lg:w-1/4">
+        <div className="flex justify-center text-center md:justify-start lg:w-1/4">
           <h2 className="flex items-center py-4 text-4xl">daisyUI</h2>
-          <div className="dropdown px-2 py-4">
+          <div className="dropdown px-2 py-4 lg:hidden">
             <motion.button
               className="btn btn-ghost lg:hidden"
               onClick={toggleMenu}
