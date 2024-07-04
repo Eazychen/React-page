@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.5 });
   const animationVariants = {
     hidden: {
       opacity: 0,
@@ -37,15 +37,24 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
         <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content text-white opacity-80">
           <div className="w-full">
-            <h3 className="mb-5 text-center text-2xl font-bold md:text-3xl lg:text-4xl">
+            <motion.h3
+              variants={animationVariants}
+              className="mb-5 text-center text-2xl font-bold md:text-3xl lg:text-4xl"
+            >
               {title}
-            </h3>
-            <p className="mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl">
+            </motion.h3>
+            <motion.p
+              variants={animationVariants}
+              className="mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl"
+            >
               {subtitle}
-            </p>
-            <p className="mb-5 whitespace-pre-line break-words p-2 text-xs md:text-center md:text-base xl:text-lg ">
+            </motion.p>
+            <motion.p
+              variants={animationVariants}
+              className="mb-5 whitespace-pre-line break-words p-2 text-xs md:text-center md:text-base xl:text-lg "
+            >
               {content}
-            </p>
+            </motion.p>
           </div>
         </div>
       </div>

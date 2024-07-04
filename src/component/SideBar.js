@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   const animationVariants = {
@@ -42,8 +42,22 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
         />
       </div>
       <div className="sidebar-paragraph">
-        <h3 className="sidebar-paragraph-title">{title}</h3>
-        <p className="sidebar-paragraph-content">{content}</p>
+        <motion.h3
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={animationVariants}
+          className="sidebar-paragraph-title"
+        >
+          {title}
+        </motion.h3>
+        <motion.p
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={animationVariants}
+          className="sidebar-paragraph-content"
+        >
+          {content}
+        </motion.p>
       </div>
     </motion.div>
   );
