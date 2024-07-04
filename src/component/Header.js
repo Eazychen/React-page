@@ -1,20 +1,30 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
-const UlGroup = ({ datas, className, isMobile }) => {
+const UlGroup = ({ datas, className, isMobile, activeItem, setActiveItem }) => {
+  const location = useLocation();
   return (
     <ul className={className.ul}>
       {datas.map((data) => (
         <motion.li
-          className={`${className.liGroup}  
-          ${isMobile ? "rounded-md active:border-2 active:border-solid active:border-blue-500" : ""}`}
+          className={`${className.liGroup} ${
+            isMobile ||
+            activeItem === data.id ||
+            location.pathname === data.path
+              ? "rounded-md active:border-2 active:border-solid active:border-blue-500"
+              : ""
+          }`}
           key={data.id}
           whileHover={{ scale: 1.05, color: "#3B82F6" }}
           whileTap={{ scale: 0.95, color: "#2563EB" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <Link to={data.path} className="block w-full">
+          <Link
+            to={data.path}
+            className="block w-full"
+            onClick={() => setActiveItem(data.id)}
+          >
             {data.title}
           </Link>
         </motion.li>
@@ -25,6 +35,7 @@ const UlGroup = ({ datas, className, isMobile }) => {
 
 const Header = ({ datas }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
@@ -63,6 +74,8 @@ const Header = ({ datas }) => {
               liGroup: "py-2 text-gray-400",
             }}
             isMobile={false}
+            activeItem={activeItem}
+            setActiveItem={setActiveItem}
           />
         </div>
       </div>
@@ -82,6 +95,8 @@ const Header = ({ datas }) => {
               }}
               onClick={toggleMenu}
               isMobile={true}
+              activeItem={activeItem}
+              setActiveItem={setActiveItem}
             />
           </motion.div>
         )}

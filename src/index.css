@@ -14,9 +14,6 @@
   @apply xl:mx-40 xl:px-8;
 }
 
-.dropdown-item:focus {
-  @apply outline;
-}
 .footer-group {
   @apply flex flex-col justify-center;
 }

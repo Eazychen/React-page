@@ -3,6 +3,7 @@ import Header from "./component/Header.js";
 import Footer from "./component/Footer.js";
 import HeroSection from "./component/HeroSection.js";
 import ServiceFeature from "./component/ServiceFeature.js";
+import BookingSteps from "./component/BookingSteps.js";
 
 const HomePage = ({ datas }) => {
   const serviceFeatureDatas = [
@@ -39,6 +40,7 @@ const HomePage = ({ datas }) => {
     <div className="flex min-h-screen flex-col">
       <Header datas={datas} />
       <HeroSection />
+      <BookingSteps />
       <ServiceFeature serviceFeatureDatas={serviceFeatureDatas} />
       <Footer datas={datas} />
     </div>
