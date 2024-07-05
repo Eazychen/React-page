@@ -32,7 +32,9 @@ const BookingSteps = () => {
   return (
     <div className="bg-gray-100">
       <div className="container-layout container-layout-lg container-layout-xl flex flex-col justify-center">
-        <h3 className="p-10 text-center text-6xl text-blue-600">預約流程</h3>
+        <div>
+          <h3 className="p-10 text-center text-5xl text-blue-600">預約流程</h3>
+        </div>
         <motion.div
           ref={ref}
           initial="hidden"

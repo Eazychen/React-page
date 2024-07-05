@@ -22,7 +22,9 @@ const Footer = ({ datas }) => {
           <div className="footer-group footer-group-md">
             <div className="my-2 flex w-full justify-center md:w-1/3">
               <div className="flex flex-col items-center p-1 md:items-start xl:p-2">
-                <h3 className="mb-2 text-2xl font-bold lg:text-4xl">daisyUI</h3>
+                <h3 className="mb-2 text-2xl font-bold text-white lg:text-4xl">
+                  daisyUI
+                </h3>
                 <ul className="flex justify-start py-2">
                   <li className="footer-first-li">
                     <a
@@ -60,17 +62,17 @@ const Footer = ({ datas }) => {
                 datas={datas}
                 className={{
                   ul: "flex flex-col p-1 xl:p-2",
-                  liGroup: "footer-li-first text-center",
+                  liGroup: "footer-li-first text-center text-gray-400",
                 }}
               />
             </div>
             <div className="my-2 flex w-full flex-col p-1 md:w-1/3 xl:p-2">
               <h5 className="footer-title text-center text-xl">聯絡方式</h5>
               <ul className="flex flex-col  p-1">
-                <li className="footer-li-second text-center">
+                <li className="footer-li-second text-center text-gray-400">
                   電話:<span className="ml-1 text-balance">0953-537-123</span>
                 </li>
-                <li className="footer-li-second text-center">
+                <li className="footer-li-second text-center text-gray-400">
                   地址:
                   <span className="ml-1">台中市大里區立仁路42-7號</span>
                 </li>

@@ -30,7 +30,8 @@
 }
 
 .footer-li-first:focus,
-.footer-li-first:hover {
+.footer-li-first:hover,
+.footer-li-first {
   @apply xl:text-blue-600;
 }
 .footer-first-li {

@@ -71,14 +71,14 @@ const HeroSection = () => {
         </h3>
       </div>
       <AnimatedSection
-        imgUrl="images/shake-hand.png"
+        imgUrl="images/shake-hand.jpg"
         title="我們的理念"
         subtitle="以人為本"
         content={`我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
         我們自創立以來秉持著「以人為本」的核心理念，並致力於為每一位顧客提供最優質的服務體驗。`}
       />
       <AnimatedSection
-        imgUrl="images/clean.png"
+        imgUrl="images/clean.jpg"
         title="我們的堅持"
         subtitle="細節至上"
         content={`我們特別注重施工整潔與細節，這是我們與眾不同的關鍵。

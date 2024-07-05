@@ -42,7 +42,9 @@ const Header = ({ datas }) => {
     <nav className="fixed left-0 top-0 z-50 w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
         <div className="flex justify-center text-center md:justify-start lg:w-1/4">
-          <h2 className="flex items-center py-4 text-4xl">daisyUI</h2>
+          <h2 className="flex items-center py-4 text-4xl text-white">
+            daisyUI
+          </h2>
           <div className="dropdown px-2 py-4 lg:hidden">
             <motion.button
               className="btn btn-ghost lg:hidden"
@@ -51,7 +53,7 @@ const Header = ({ datas }) => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-10 w-8 object-cover"
+                className="h-10 w-8 object-cover text-gray-600 delay-300 active:text-gray-100 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
