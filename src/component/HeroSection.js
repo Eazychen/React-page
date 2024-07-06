@@ -26,7 +26,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
-      className="container-layout container-layout-lg container-layout-xl my-10"
+      className="container-layout container-layout-lg container-layout-xl mb-10 "
     >
       <div
         className="hero min-h-[60vh] bg-cover bg-center lg:min-h-[50vh] xl:min-h-screen "
@@ -51,7 +51,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
             </motion.p>
             <motion.p
               variants={animationVariants}
-              className="mb-5 whitespace-pre-line break-words p-2 text-xs md:text-center md:text-base xl:text-lg "
+              className="mb-5 whitespace-pre-line break-words text-center text-xs md:p-2 md:text-base xl:text-lg "
             >
               {content}
             </motion.p>
@@ -64,27 +64,26 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
 
 const HeroSection = () => {
   return (
-    <div className="mt-10 bg-gray-100 py-10">
-      <div className="container-layout container-layout-lg container-layout-xl">
-        <h3 className="flex justify-center py-10 text-5xl text-blue-600 md:text-6xl">
-          關於我們
-        </h3>
-      </div>
-      <AnimatedSection
-        imgUrl="images/shake-hand.jpg"
-        title="我們的理念"
-        subtitle="以人為本"
-        content={`我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
-        我們自創立以來秉持著「以人為本」的核心理念，並致力於為每一位顧客提供最優質的服務體驗。`}
-      />
-      <AnimatedSection
-        imgUrl="images/clean.jpg"
-        title="我們的堅持"
-        subtitle="細節至上"
-        content={`我們特別注重施工整潔與細節，這是我們與眾不同的關鍵。
+    <div className="bg-blue-100">
+      <div className="container-layout container-layout-lg container-layout-xl my-20">
+        <h3 className="title mb-10">關於我們</h3>
+        <AnimatedSection
+          imgUrl="images/shake-hand.jpg"
+          title="我們的理念"
+          subtitle="以人為本"
+          content={`我們深知電器不僅是日常生活中的工具，更是提升生活品質的重要夥伴。
+        我們自創立以來秉持著「以人為本」的核心理念，
+        並致力於為每一位顧客提供最優質的服務體驗。`}
+        />
+        <AnimatedSection
+          imgUrl="images/clean.jpg"
+          title="我們的堅持"
+          subtitle="細節至上"
+          content={`我們特別注重施工整潔與細節，這是我們與眾不同的關鍵。
         在每一次安裝和維修服務中都會確保工作現場的整潔，並避免留下任何灰塵或垃圾。`}
-        reverse
-      />
+          reverse
+        />
+      </div>
     </div>
   );
 };

@@ -70,8 +70,9 @@ const ServiceFeatureItem = ({ title, paragraph }) => {
 
 const ServiceFeature = ({ serviceFeatureDatas }) => {
   return (
-    <div className="bg-gray-100">
-      <div className="container-layout container-layout-lg container-layout-xl my-10 flex flex-wrap">
+    <div className="bg-blue-100">
+      <div className="container-layout container-layout-lg container-layout-xl my-20 flex flex-wrap">
+        <h3 className=" title mb-10">相關服務</h3>
         {serviceFeatureDatas.map((item, index) => (
           <ServiceFeatureItem key={index} {...item} />
         ))}

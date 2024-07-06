@@ -32,50 +32,51 @@ const BookingSteps = () => {
 
   return (
     <div className="bg-gray-100">
-      <div className="container-layout container-layout-lg container-layout-xl flex flex-col justify-center">
+      <div className="container-layout container-layout-lg container-layout-xl my-20 flex flex-col justify-center">
         <div>
-          <h3 className="p-10 text-center text-5xl text-blue-600">預約流程</h3>
-        </div>
-        <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={animationVariants}
-          transition={{ duration: 0.5, ease: "easeIn" }}
-          className="relative"
-        >
-          <div
-            className="item-center mt-5 flex min-h-[50vh] w-full bg-cover bg-center bg-no-repeat opacity-70 md:justify-end xl:min-h-screen"
-            style={{ backgroundImage: "url(images/form-background.jpg)" }}
-          ></div>
-          <div className="relative my-10 rounded-lg bg-white bg-opacity-90 p-4 shadow-lg md:absolute md:right-[5%] md:top-1/2 md:w-1/3 md:-translate-y-1/2 md:transform">
-            <ul className="steps steps-vertical w-full text-xl text-gray-600">
-              {steps.map((step, index) => (
-                <motion.li
-                  key={index}
-                  className={`step ${index <= currentStep ? "step-primary" : ""}`}
-                >
-                  {/* AnimatePresence 用於管理進場和退場動畫 */}
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={currentStep >= index ? "active" : "inactive"}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <div
-                        className={`fon-bold ${currentStep === index ? "text-red-600" : ""}`}
+          <h3 className="title mb-10">預約流程</h3>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={animationVariants}
+            transition={{ duration: 0.5, ease: "easeIn" }}
+            className="relative"
+          >
+            <div
+              className="item-center flex min-h-[50vh] w-full bg-cover bg-center bg-no-repeat opacity-70 md:min-h-[60vh]  md:justify-end lg:min-h-screen"
+              style={{ backgroundImage: "url(images/form-background.jpg)" }}
+            ></div>
+            <div className="relative my-10 rounded-lg bg-white bg-opacity-90 p-4 shadow-lg md:absolute md:right-[5%] md:top-1/2 md:my-0 md:w-1/3 md:-translate-y-1/2 md:transform">
+              <ul className="steps steps-vertical w-full text-xl text-gray-600">
+                {steps.map((step, index) => (
+                  <motion.li
+                    key={index}
+                    className={`step ${index <= currentStep ? "step-primary" : ""}`}
+                  >
+                    {/* AnimatePresence 用於管理進場和退場動畫 */}
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentStep >= index ? "active" : "inactive"}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="flex w-full items-center justify-center"
                       >
-                        {step}
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
+                        <div
+                          className={`p-2 font-bold ${currentStep === index ? "text-red-600" : ""}`}
+                        >
+                          {step}
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

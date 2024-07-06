@@ -39,7 +39,7 @@ const Header = ({ datas }) => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
-    <nav className="fixed left-0 top-0 z-50 w-full bg-gray-800 shadow-md">
+    <nav className="fixed left-0 top-0 z-50  w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
         <div className="flex justify-center text-center md:justify-start lg:w-1/4">
           <h2 className="flex items-center py-4 text-4xl text-white">

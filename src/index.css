@@ -13,6 +13,9 @@
 .container-layout-xl {
   @apply xl:mx-40 xl:px-8;
 }
+.title {
+  @apply flex w-full justify-center py-10 text-5xl font-bold text-blue-700 md:text-6xl;
+}
 
 .footer-group {
   @apply flex flex-col justify-center;
