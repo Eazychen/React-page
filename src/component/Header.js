@@ -22,7 +22,7 @@ const UlGroup = ({ datas, className, isMobile, activeItem, setActiveItem }) => {
         >
           <Link
             to={data.path}
-            className="flex w-full items-center justify-center lg:justify-end "
+            className="flex w-full items-center justify-center lg:justify-end"
             onClick={() => setActiveItem(data.id)}
           >
             {data.title}
@@ -73,7 +73,7 @@ const Header = ({ datas }) => {
           <UlGroup
             datas={datas}
             className={{
-              ul: "font-roboto menu menu-md flex  flex-row items-center p-2 xl:menu-lg ",
+              ul: "font-roboto menu menu-md flex flex-row items-center xl:menu-lg",
               liGroup: "py-2 tracking-wide text-gray-400",
             }}
             isMobile={false}

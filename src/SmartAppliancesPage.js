@@ -3,7 +3,7 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import SideBar from "./component/SideBar";
 
-const SmartAppliances = ({ datas }) => {
+const SmartAppliancesPage = ({ datas }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header datas={datas} />
@@ -13,4 +13,4 @@ const SmartAppliances = ({ datas }) => {
   );
 };
 
-export default SmartAppliances;
+export default SmartAppliancesPage;

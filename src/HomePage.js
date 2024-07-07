@@ -4,7 +4,7 @@ import Footer from "./component/Footer.js";
 import HeroSection from "./component/HeroSection.js";
 import ServiceFeature from "./component/ServiceFeature.js";
 import BookingSteps from "./component/BookingSteps.js";
-import { ParallaxProvider } from "react-scroll-parallax";
+import Swiper from "./component/Swiper.js";
 
 const HomePage = ({ datas }) => {
   const serviceFeatureDatas = [
@@ -40,9 +40,8 @@ const HomePage = ({ datas }) => {
   return (
     <div className="flex min-h-screen flex-col">
       <Header datas={datas} />
-      <ParallaxProvider>
-        <HeroSection />
-      </ParallaxProvider>
+      <Swiper />
+      <HeroSection />
       <BookingSteps />
       <ServiceFeature serviceFeatureDatas={serviceFeatureDatas} />
       <Footer datas={datas} />

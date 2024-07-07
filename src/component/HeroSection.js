@@ -23,7 +23,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
   return (
     <motion.div
       ref={ref}
-      initial="hidden" q
+      initial="hidden" 
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
       className="mb-10"

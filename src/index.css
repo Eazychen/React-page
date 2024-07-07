@@ -46,10 +46,6 @@
   @apply xl:opacity-80;
 }
 
-.slide {
-  @apply flex items-center justify-center;
-}
-
 .sidebar {
   @apply my-5 flex flex-col rounded-md bg-sky-50 md:flex-row md:p-6;
 }
@@ -89,4 +85,8 @@
 }
 .service-paragraph-content {
   @apply font-roboto break-words  text-sm text-white md:text-xl;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  @apply bg-slate-600;
 }
