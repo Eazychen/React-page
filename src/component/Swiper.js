@@ -16,7 +16,7 @@ const images = [
 const SwiperComponent = () => {
   return (
     <div className="bg-gray-200">
-      <div className="container-layout container-layout-lg container-layout-xl mt-20 py-20">
+      <div className="container-layout container-layout-lg container-layout-xl mt-20 py-10">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -30,7 +30,7 @@ const SwiperComponent = () => {
             clickable: true,
           }}
           modules={[Autoplay, Pagination]}
-          className="mySwiper"
+          className="mySwiper shadow-xl"
         >
           {images.map((image, index) => (
             <SwiperSlide
@@ -40,7 +40,7 @@ const SwiperComponent = () => {
               <img
                 src={image}
                 alt={`Slide ${index}`}
-                className="max-h-[200px] w-full object-cover opacity-80 md:max-h-[400px] xl:md:max-h-[600px]"
+                className="max-h-[200px] w-full object-cover opacity-90 md:max-h-[400px] xl:md:max-h-[800px]"
               />
             </SwiperSlide>
           ))}

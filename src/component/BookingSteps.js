@@ -31,7 +31,7 @@ const BookingSteps = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100">
+    <main className="bg-gray-100">
       <div className="container-layout container-layout-lg container-layout-xl my-20 flex flex-col justify-center">
         <div>
           <h3 className="title mb-10">預約流程</h3>
@@ -62,7 +62,7 @@ const BookingSteps = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5 }}
-                        className="font-roboto flex w-full items-center justify-center"
+                        className="flex w-full items-center justify-center font-roboto"
                       >
                         <div
                           className={`p-2 font-bold ${currentStep === index ? "text-red-600" : ""}`}
@@ -78,7 +78,7 @@ const BookingSteps = () => {
           </motion.div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

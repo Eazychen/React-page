@@ -5,8 +5,7 @@ import Footer from "./component/Footer";
 const ContactPage = ({ datas }) => {
   return (
     <div className="flex min-h-screen flex-col">
-      <Header datas={datas} />
-      
+      <Header datas={datas} />   
       <Footer datas={datas} />
     </div>
   );

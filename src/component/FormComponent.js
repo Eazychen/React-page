@@ -58,7 +58,7 @@ const FormComponent = () => {
       <div className="container-layout container-layout-lg container-layout-xl">
         <div className="border-grey-500 my-24 flex flex-col items-center rounded-xl border-2 bg-sky-50 p-2 shadow-md">
           <div className="my-5">
-            <h4 className="font-orbitron p-4 text-3xl font-semibold text-blue-800 md:text-5xl">
+            <h4 className="p-4 font-orbitron text-3xl font-semibold text-blue-800 md:text-5xl">
               預約服務{" "}
             </h4>
           </div>
@@ -180,7 +180,7 @@ const FormComponent = () => {
               </h5>
               <p className="space-y-1 p-2">
                 <span className="block p-1">
-                  表單內容須確實填寫，方便我方與您聯繫
+                  表單內容須確實填寫，方便我們與您聯繫
                 </span>
                 <span className="block p-1">
                   我們將在 24 小時內與您聯繫確認預約
@@ -191,7 +191,7 @@ const FormComponent = () => {
                 <span className="block p-1">
                   服務時間為週一至週六 9:00-18:00
                 </span>
-                <span className=" block p-1">您的個人信息將受到嚴格保護</span>
+                <span className=" block p-1">您的個人信息將會受到嚴格保護</span>
               </p>
               <p className="p-2 italic text-red-600">
                 如有任何疑問，請撥打專線0953-537-123
