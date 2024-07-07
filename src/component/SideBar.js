@@ -39,7 +39,7 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
           src={imgUrl}
           alt={imgAlt}
           className="h-auto w-full rounded-lg align-middle"
-        />
+        />     
       </div>
       <div className="sidebar-paragraph">
         <motion.h3
@@ -79,7 +79,7 @@ const SideBar = () => {
       imgAlt: "space",
       title: "打造舒適高效空間",
       content: `智慧家庭設計專注於融合最新科技來提升居住體驗。
-                自動窗簾、環境音響系統以及遠程控制的安全設施，均旨在打造一個便利和舒適的居家環境。`,
+                自動窗簾、環境音響系統以及遠程控制的安全設施，均旨是在打造一個便利和舒適的居家環境。`,
       reverse: true,
     },
     {

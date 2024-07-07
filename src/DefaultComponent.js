@@ -1,13 +1,18 @@
 import React from "react";
+import {
+  AiOutlineInfoCircle,
+  AiOutlineCalendar,
+  AiOutlineHome,
+  AiOutlinePhone,
+} from "react-icons/ai";
 
 const DefaultComponent = ({ Component }) => {
   const datas = [
-    { id: 1, title: "關於我們", path: "/about" },
-    { id: 2, title: "預約服務", path: "/services" },
-    { id: 3, title: "智慧居家", path: "/smartAppliances" },
-    { id: 4, title: "聯繫我們", path: "/contact" },
+    { id: 1, path: "/about", title: "關於我們", icon: <AiOutlineInfoCircle /> },
+    { id: 2, path: "/booking", title: "預約服務", icon: <AiOutlineCalendar /> },
+    { id: 3, path: "/smart-home", title: "智慧居家", icon: <AiOutlineHome /> },
+    { id: 4, path: "/contact", title: "聯繫我們", icon: <AiOutlinePhone /> },
   ];
-
   return (
     <div>
       <Component datas={datas} />

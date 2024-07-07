@@ -22,10 +22,11 @@ const UlGroup = ({ datas, className, isMobile, activeItem, setActiveItem }) => {
         >
           <Link
             to={data.path}
-            className="block w-full"
+            className="flex w-full items-center justify-center lg:justify-end "
             onClick={() => setActiveItem(data.id)}
           >
             {data.title}
+            <span className="ml-2 ">{data.icon}</span>
           </Link>
         </motion.li>
       ))}
@@ -72,8 +73,8 @@ const Header = ({ datas }) => {
           <UlGroup
             datas={datas}
             className={{
-              ul: "menu menu-lg flex flex-row items-center p-2",
-              liGroup: "py-2 text-gray-400",
+              ul: "font-roboto menu menu-md flex  flex-row items-center p-2 xl:menu-lg ",
+              liGroup: "py-2 tracking-wide text-gray-400",
             }}
             isMobile={false}
             activeItem={activeItem}
@@ -93,7 +94,8 @@ const Header = ({ datas }) => {
               datas={datas}
               className={{
                 ul: "space-y-1 px-2 pb-3 pt-2 sm:px-3",
-                liGroup: "py-2 text-center text-xl font-medium text-gray-400",
+                liGroup:
+                  "font-roboto flex py-2 text-center text-lg font-medium tracking-wide text-gray-400",
               }}
               onClick={toggleMenu}
               isMobile={true}

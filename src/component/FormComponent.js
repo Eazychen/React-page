@@ -58,7 +58,7 @@ const FormComponent = () => {
       <div className="container-layout container-layout-lg container-layout-xl">
         <div className="border-grey-500 my-24 flex flex-col items-center rounded-xl border-2 bg-sky-50 p-2 shadow-md">
           <div className="my-5">
-            <h4 className="p-4 text-3xl text-blue-800 md:text-5xl">
+            <h4 className="font-orbitron p-4 text-3xl font-semibold text-blue-800 md:text-5xl">
               預約服務{" "}
             </h4>
           </div>

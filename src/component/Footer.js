@@ -57,18 +57,23 @@ const Footer = ({ datas }) => {
               </div>
             </div>
             <div className="my-2 flex w-full flex-col justify-center p-1 md:w-1/3 xl:p-2 ">
-              <h5 className="footer-title text-center text-xl">服務相關</h5>
+              <h5 className="font-raleway footer-title text-center text-xl tracking-wide">
+                服務相關
+              </h5>
               <UlGroup
                 datas={datas}
                 className={{
                   ul: "flex flex-col p-1 xl:p-2",
-                  liGroup: "footer-li-first text-center text-gray-400",
+                  liGroup:
+                    "footer-li-first font-raleway text-center tracking-wide text-gray-400",
                 }}
               />
             </div>
             <div className="my-2 flex w-full flex-col p-1 md:w-1/3 xl:p-2">
-              <h5 className="footer-title text-center text-xl">聯絡方式</h5>
-              <ul className="flex flex-col  p-1">
+              <h5 className="footer-title text-center text-xl tracking-wide">
+                聯絡方式
+              </h5>
+              <ul className="flex flex-col p-1 xl:p-2">
                 <li className="footer-li-second text-center text-gray-400">
                   電話:<span className="ml-1 text-balance">0953-537-123</span>
                 </li>
@@ -82,7 +87,7 @@ const Footer = ({ datas }) => {
         </div>
         <div className="bg-black">
           <div className="container-layout-xl container-layout-lg  mx-auto">
-            <p className="text-balance py-3 text-center font-bold text-gray-500  md:text-xl">
+            <p className="text-balance py-3 text-center font-bold tracking-wide text-gray-500 md:text-xl">
               Copyright &copy; 2023-2024 Li Ming Electronics All rights
               reserved.
             </p>

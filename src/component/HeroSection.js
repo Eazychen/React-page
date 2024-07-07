@@ -23,35 +23,35 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
   return (
     <motion.div
       ref={ref}
-      initial="hidden"
+      initial="hidden" q
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
-      className="container-layout container-layout-lg container-layout-xl mb-10 "
+      className="mb-10"
     >
       <div
-        className="hero min-h-[60vh] bg-cover bg-center lg:min-h-[50vh] xl:min-h-screen "
+        className="hero min-h-[50vh] bg-cover bg-center md:min-h-[80vh] xl:min-h-screen "
         style={{
           backgroundImage: `url(${imgUrl})`,
         }}
       >
         <div className="hero-overlay bg-opacity-70"></div>
-        <div className="hero-content text-white opacity-80">
+        <div className="hero-content opacity-80">
           <div className="w-full">
             <motion.h3
               variants={animationVariants}
-              className="mb-5 text-center text-2xl font-bold md:text-3xl lg:text-4xl"
+              className="mb-5 text-center text-2xl font-bold text-gray-100 md:text-3xl lg:text-4xl"
             >
               {title}
             </motion.h3>
             <motion.p
               variants={animationVariants}
-              className="mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl"
+              className="font-raleway mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl"
             >
               {subtitle}
             </motion.p>
             <motion.p
               variants={animationVariants}
-              className="mb-5 whitespace-pre-line break-words text-center text-xs md:p-2 md:text-base xl:text-lg "
+              className="font-roboto mb-5 whitespace-pre-line break-words text-center text-xs text-gray-200 md:p-2 md:text-base xl:text-lg"
             >
               {content}
             </motion.p>
@@ -66,7 +66,7 @@ const HeroSection = () => {
   return (
     <div className="bg-blue-100">
       <div className="container-layout container-layout-lg container-layout-xl my-20">
-        <h3 className="title mb-10">關於我們</h3>
+        <h3 className="title mb-10">經營理念</h3>
         <AnimatedSection
           imgUrl="images/shake-hand.jpg"
           title="我們的理念"

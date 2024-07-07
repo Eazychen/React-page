@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
 .container-layout {
   @apply mx-5 px-4;
 }
@@ -14,7 +16,7 @@
   @apply xl:mx-40 xl:px-8;
 }
 .title {
-  @apply flex w-full justify-center py-10 text-5xl font-bold text-blue-700 md:text-6xl;
+  @apply font-orbitron flex w-full justify-center py-10 text-5xl font-bold tracking-widest text-blue-700 md:text-6xl;
 }
 
 .footer-group {
@@ -29,7 +31,7 @@
 }
 
 .footer-li-second {
-  @apply mb-2 text-sm;
+  @apply py-1 text-sm;
 }
 
 .footer-li-first:focus,
@@ -61,10 +63,10 @@
   @apply flex w-full flex-col justify-center p-2 md:w-1/2 md:p-4;
 }
 .sidebar-paragraph-title {
-  @apply px-4 py-2  text-center text-2xl font-semibold text-sky-700 md:text-4xl;
+  @apply font-orbitron px-4  py-2 text-center text-2xl font-semibold tracking-widest text-sky-700 md:text-4xl;
 }
 .sidebar-paragraph-content {
-  @apply flex justify-center whitespace-pre-line break-words p-4  text-base leading-relaxed text-gray-600 md:text-left md:text-lg;
+  @apply font-roboto flex justify-center whitespace-pre-line break-words  p-4 text-base leading-relaxed tracking-wider text-gray-600 md:text-left md:text-lg;
 }
 
 .feature-section-title {
@@ -83,8 +85,8 @@
 }
 
 .service-paragraph-title {
-  @apply p-2 text-xl text-red-600 md:text-3xl xl:text-4xl;
+  @apply font-orbitron p-2 text-xl text-red-600 md:text-3xl xl:text-4xl;
 }
 .service-paragraph-content {
-  @apply break-words text-sm  text-white md:text-xl;
+  @apply font-roboto break-words  text-sm text-white md:text-xl;
 }

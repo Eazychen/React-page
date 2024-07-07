@@ -5,11 +5,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      maxHeight: {
-        "swiper-silde": "36em",
-      },
-      zIndex: {
-        999: "999",
+      fontFamily: {
+        orbitron: ["Orbitron", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

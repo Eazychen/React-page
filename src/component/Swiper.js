@@ -1,8 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay } from "swiper/modules";
-import { Parallax } from "react-scroll-parallax";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper/core";
+
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 const SwiperComponent = () => {
   return (
