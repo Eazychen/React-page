@@ -23,17 +23,17 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
   return (
     <motion.div
       ref={ref}
-      initial="hidden" 
+      initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
       className="mb-10"
     >
       <div
-        className="hero min-h-[50vh] bg-cover bg-center md:min-h-[80vh] xl:min-h-screen "
+        className="hero min-h-[50vh] bg-cover bg-center shadow-lg md:min-h-[80vh] xl:min-h-screen"
         style={{
           backgroundImage: `url(${imgUrl})`,
         }}
-      >
+      > 
         <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content opacity-80">
           <div className="w-full">
@@ -45,13 +45,13 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
             </motion.h3>
             <motion.p
               variants={animationVariants}
-              className="font-raleway mb-5 text-center text-lg text-red-600 md:text-xl lg:text-2xl"
+              className="mb-5 text-center font-raleway text-lg text-red-600 md:text-xl lg:text-2xl"
             >
               {subtitle}
             </motion.p>
             <motion.p
               variants={animationVariants}
-              className="font-roboto mb-5 whitespace-pre-line break-words text-center text-xs text-gray-200 md:p-2 md:text-base xl:text-lg"
+              className="mb-5 whitespace-pre-line break-words text-center font-roboto text-xs text-gray-200 md:p-2 md:text-base xl:text-lg"
             >
               {content}
             </motion.p>

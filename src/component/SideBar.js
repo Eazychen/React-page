@@ -39,7 +39,8 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
           src={imgUrl}
           alt={imgAlt}
           className="h-auto w-full rounded-lg align-middle"
-        />     
+          loading="lazy"
+        />
       </div>
       <div className="sidebar-paragraph">
         <motion.h3

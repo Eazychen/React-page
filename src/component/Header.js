@@ -43,10 +43,19 @@ const Header = ({ datas }) => {
     <nav className="fixed left-0 top-0 z-50  w-full bg-gray-800 shadow-md">
       <div className="container-layout container-layout-lg container-layout-xl flex items-center justify-center lg:justify-between">
         <div className="flex justify-center text-center md:justify-start lg:w-1/4">
-          <h2 className="flex items-center py-4 text-4xl text-white">
-            daisyUI
+          <h2 className="flex items-center justify-center p-2">
+            <div className="w-1/3">
+              <img
+                src="/images/logo.png"
+                alt=""
+                className="w-full object-cover"
+              />
+            </div>
+            <span className="flex w-2/3  items-center justify-end text-xl text-gray-200 ">
+              立明電器
+            </span>
           </h2>
-          <div className="dropdown px-2 py-4 lg:hidden">
+          <div className="dropdown p-1 lg:hidden">
             <motion.button
               className="btn btn-ghost lg:hidden"
               onClick={toggleMenu}
@@ -73,7 +82,7 @@ const Header = ({ datas }) => {
           <UlGroup
             datas={datas}
             className={{
-              ul: "font-roboto menu menu-md flex flex-row items-center xl:menu-lg",
+              ul: "menu menu-md flex flex-row items-center font-roboto xl:menu-lg",
               liGroup: "py-2 tracking-wide text-gray-400",
             }}
             isMobile={false}
@@ -95,7 +104,7 @@ const Header = ({ datas }) => {
               className={{
                 ul: "space-y-1 px-2 pb-3 pt-2 sm:px-3",
                 liGroup:
-                  "font-roboto flex py-2 text-center text-lg font-medium tracking-wide text-gray-400",
+                  "flex py-2 text-center font-roboto text-lg font-medium tracking-wide text-gray-400",
               }}
               onClick={toggleMenu}
               isMobile={true}
