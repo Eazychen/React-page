@@ -34,12 +34,14 @@ const Contact = () => {
           className="flex w-full flex-col items-center p-2 md:w-1/2"
           variants={itemVariants}
         >
-          <h2 className="mb-4 text-2xl font-semibold">聯繫方式</h2>
+          <h2 className="mb-4 text-2xl font-semibold text-gray-900">
+            聯繫方式
+          </h2>
           <motion.div
             className="mb-4 flex items-center text-left"
             variants={itemVariants}
           >
-            <FaPhone className="mr-2 text-gray-600" />
+            <FaPhone className="mr-2 text-gray-700" />
             <strong>聯絡電話：</strong>
             <a
               href="tel:0953537123"
@@ -52,7 +54,7 @@ const Contact = () => {
             className="mb-4 flex items-center text-left"
             variants={itemVariants}
           >
-            <FaLine className="mr-2 text-gray-600" />
+            <FaLine className="mr-2 text-gray-700" />
             <strong>官方 Line:</strong>
             <a
               href="https://lin.ee/pa7PkA0"
@@ -65,7 +67,7 @@ const Contact = () => {
             className="mb-4 flex items-center text-left"
             variants={itemVariants}
           >
-            <FaMapMarkerAlt className="mr-2 text-gray-600" />
+            <FaMapMarkerAlt className="mr-2 text-gray-700" />
             <strong>地址：</strong>
             <a
               href="https://maps.app.goo.gl/Fj1eKydQsmeyTaBS6"
@@ -104,7 +106,6 @@ const Contact = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.759884106482!2d120.6996926748433!3d24.10993817487945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dab3fc97ec9%3A0x50df1b9e2b7c9649!2z56uL5piO6Zu75Zmo6KGMLeWkp-mHjOWGt-awo-e2reS_ruaOqOiWpnzlhrfmsKPkv53ppIp85bCI5qWt5Ya35rCj5L-d6aSKfOWGt-awo-W_q-mAn-e2reS_rnzngYzlhrfnhaR85Ya35rCj5a6J6KOdfOWwiOalreWGt-awo-S_nemkinzmmbrmhaflrrbpm7s!5e0!3m2!1szh-TW!2stw!4v1720441687503!5m2!1szh-TW!2stw"
             width="100%"
             height="100%"
-            allowfullscreen=""
             style={{ border: 0 }}
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
