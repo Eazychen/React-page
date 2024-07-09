@@ -35,7 +35,7 @@ const Contact = () => {
           variants={itemVariants}
         >
           <h2 className="mb-4 text-2xl font-semibold text-gray-900">
-            聯繫方式
+            聯繫資訊
           </h2>
           <motion.div
             className="mb-4 flex items-center text-left"

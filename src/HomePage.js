@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./component/Header.js";
 import Footer from "./component/Footer.js";
 import HeroSection from "./component/HeroSection.js";
 import ServiceFeature from "./component/ServiceFeature.js";
 import BookingSteps from "./component/BookingSteps.js";
 import Swiper from "./component/Swiper.js";
+import LoadingAnimation from "./component/LoadingAnimation.js";
 
 const HomePage = ({ datas }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000);
+  }, []);
+
+  if (loading) {
+    return <LoadingAnimation />;
+  }
+
   const serviceFeatureDatas = [
     {
       title: "電器維修",

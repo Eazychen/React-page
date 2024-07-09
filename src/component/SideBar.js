@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.5,
+    threshold: 0.8,
   });
 
   const animationVariants = {
