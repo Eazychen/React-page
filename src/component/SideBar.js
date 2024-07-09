@@ -34,7 +34,7 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
       animate={inView ? "visible" : "hidden"}
       variants={animationVariants}
     >
-      <div className="sidebar-picture">
+      <div className="sidebar-picture bg-slate-100">
         <img
           src={imgUrl}
           alt={imgAlt}
