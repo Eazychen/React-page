@@ -46,20 +46,20 @@ const ServiceFeatureItem = ({ title, paragraph }) => {
           rotate: 5,
         }}
         whileTap={{ scale: 1.1, rotate: 5 }}
-        className="rounded-ful group flex w-1/4 items-center justify-center self-center p-4"
+        className="group flex w-1/4 items-center justify-center self-center p-4"
       >
-        <Icon className="text-4xl text-gray-700 hover:text-blue-700 focus:text-blue-700 md:text-5xl" />
+        <Icon className="text-4xl text-gray-600 hover:text-blue-700 focus:text-blue-700 md:text-5xl" />
       </motion.figure>
       <div className="my-2 flex w-2/4 flex-col items-center justify-center">
         <motion.h3
           variants={variants}
-          className="font-raleway card-title my-3 justify-center text-2xl font-semibold text-gray-700 "
+          className="card-title my-3 justify-center font-raleway text-2xl font-semibold text-gray-700 "
         >
           {title}
         </motion.h3>
         <motion.p
           variants={variants}
-          className="font-roboto whitespace-pre-line break-words p-2 text-sm leading-relaxed tracking-wide text-black md:text-base"
+          className="whitespace-pre-line break-words p-2 font-roboto text-sm leading-relaxed tracking-wide text-black md:text-base"
         >
           {paragraph}
         </motion.p>

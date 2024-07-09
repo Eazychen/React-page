@@ -27,7 +27,7 @@ const Footer = ({ datas }) => {
                     <img src="/images/logo.png" alt="" />
                   </div>
                   <span className="flex w-2/3 items-center justify-end text-xl text-gray-200">
-                    立明電器行
+                    立明電器
                   </span>
                 </h3>
                 <ul className="flex justify-start py-2">
@@ -62,7 +62,7 @@ const Footer = ({ datas }) => {
               </div>
             </div>
             <div className="my-2 flex w-full flex-col justify-center p-1 md:w-1/3 xl:p-2 ">
-              <h5 className="footer-title text-center font-raleway text-xl tracking-wide">
+              <h5 className="footer-title text-center font-raleway text-xl tracking-wide text-gray-200">
                 服務相關
               </h5>
               <UlGroup
@@ -75,7 +75,7 @@ const Footer = ({ datas }) => {
               />
             </div>
             <div className="my-2 flex w-full flex-col p-1 md:w-1/3 xl:p-2">
-              <h5 className="footer-title text-center text-xl tracking-wide">
+              <h5 className="footer-title text-center text-xl tracking-wide text-gray-200">
                 聯絡方式
               </h5>
               <ul className="flex flex-col p-1 xl:p-2">

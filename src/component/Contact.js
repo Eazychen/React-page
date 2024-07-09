@@ -23,15 +23,15 @@ const Contact = () => {
     },
   };
   return (
-    <div className="bg-gray-200">
+    <div className="flex-grow bg-gray-200">
       <motion.main
-        className="container-layout container-layout-lg container-layout-xl mb-10 mt-20 flex flex-col py-10 md:flex-row"
+        className="container-layout container-layout-lg container-layout-xl mt-20 flex flex-col items-center py-10 xl:mb-10 xl:flex-row"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.div
-          className="flex w-full flex-col items-center p-2 md:w-1/2"
+          className="mb-10 flex w-full flex-col items-center p-2 md:w-1/2"
           variants={itemVariants}
         >
           <h2 className="mb-4 text-2xl font-semibold text-gray-900">
@@ -87,7 +87,7 @@ const Contact = () => {
             <motion.img
               src="/images/contact.jpg"
               alt="contact"
-              className="w-full rounded-lg object-cover opacity-80 shadow-md"
+              className="my-3 w-full rounded-lg object-cover opacity-80 shadow-md"
               loading="lazy"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -96,7 +96,7 @@ const Contact = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          className="overflow-hidden rounded-lg border-4 border-white shadow-lg md:w-1/2"
+          className="w-full overflow-hidden rounded-lg border-4 border-white shadow-lg xl:w-1/2"
           variants={containerVariants}
         >
           <h3 className="bg-white p-2 pb-2 text-center text-xl font-semibold text-gray-800">

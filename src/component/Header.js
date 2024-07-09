@@ -51,8 +51,8 @@ const Header = ({ datas }) => {
                 className="w-full object-cover"
               />
             </div>
-            <span className="flex w-2/3  items-center justify-end text-xl text-gray-200 ">
-              立明電器行
+            <span className="flex w-2/3 items-center justify-end text-xl text-gray-200 ">
+              立明電器
             </span>
           </h2>
           <div className="dropdown p-1 lg:hidden">
