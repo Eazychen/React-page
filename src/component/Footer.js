@@ -27,7 +27,7 @@ const Footer = ({ datas }) => {
                     <img src="/images/logo.png" alt="" />
                   </div>
                   <span className="flex w-2/3 items-center justify-end text-xl text-gray-200">
-                    立明電器
+                    立明電器行
                   </span>
                 </h3>
                 <ul className="flex justify-start py-2">

@@ -40,7 +40,7 @@ const SwiperComponent = () => {
               <img
                 src={image}
                 alt={`Slide${index}`}
-                className="max-h-[200px] w-full object-cover opacity-90 md:max-h-[400px] xl:max-h-[800px]"
+                className="max-h-[200px] w-full object-cover opacity-90 md:max-h-[400px] xl:max-h-[600px]"
                 loading="lazy"
               />
             </SwiperSlide>
