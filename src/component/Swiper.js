@@ -16,7 +16,7 @@ const images = [
 const SwiperComponent = () => {
   return (
     <div className="bg-gray-200">
-      <div className="container-layout container-layout-lg container-layout-xl mt-20 py-10">
+      <div className="mt-14 pb-5 lg:mt-20">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -35,12 +35,12 @@ const SwiperComponent = () => {
           {images.map((image, index) => (
             <SwiperSlide
               key={index}
-              className="flex items-center justify-center"
+              className="flex items-center justify-center transition-opacity duration-300"
             >
               <img
                 src={image}
-                alt={`Slide ${index}`}
-                className="max-h-[200px] w-full object-cover opacity-90 md:max-h-[400px] xl:md:max-h-[800px]"
+                alt={`Slide${index}`}
+                className="max-h-[200px] w-full object-cover opacity-90 md:max-h-[400px] xl:max-h-[800px]"
                 loading="lazy"
               />
             </SwiperSlide>
