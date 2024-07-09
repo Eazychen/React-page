@@ -38,7 +38,7 @@ const SideBarItem = ({ imgUrl, imgAlt, title, content, reverse }) => {
         <img
           src={imgUrl}
           alt={imgAlt}
-          className="h-auto w-full rounded-lg align-middle"
+          className="h-full w-full rounded-lg align-middle"
           loading="lazy"
         />
       </div>
