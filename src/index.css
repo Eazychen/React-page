@@ -62,7 +62,7 @@
   @apply my-5 flex flex-col rounded-md bg-sky-50  shadow-sm md:flex-row-reverse md:p-6;
 }
 .sidebar-picture {
-  @apply mb-4 max-h-[50vh] w-full overflow-hidden rounded-lg bg-sky-50 object-cover p-2 align-middle  md:mb-0 md:w-1/2;
+  @apply mb-4 max-h-[50vh] w-full overflow-hidden rounded-lg bg-sky-50 object-cover p-2 align-middle md:mb-0 md:w-1/2;
 }
 .sidebar-paragraph {
   @apply flex w-full flex-col justify-center p-2 md:w-1/2 md:p-4;
