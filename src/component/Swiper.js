@@ -16,7 +16,7 @@ const images = [
 const SwiperComponent = () => {
   return (
     <div className="bg-gray-100">
-      <div className="mt-14 lg:mt-20">
+      <div className="mt-14 lg:mt-[85px]">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
