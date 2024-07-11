@@ -72,7 +72,7 @@
   @apply p-2 text-center font-orbitron text-2xl font-semibold tracking-widest text-sky-700 md:text-3xl xl:text-4xl;
 }
 .sidebar-paragraph-content {
-  @apply flex justify-center whitespace-pre-line break-words p-4  font-roboto text-base leading-relaxed tracking-wider text-gray-600 md:text-left md:text-lg;
+  @apply flex justify-center whitespace-pre-line break-words p-4 font-roboto text-base leading-relaxed tracking-wider text-gray-600 md:text-left md:text-lg;
 }
 
 .feature-section-title {
