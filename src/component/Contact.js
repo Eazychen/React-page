@@ -9,8 +9,8 @@ const Contact = () => {
       x: 0,
       opacity: 1,
       transition: {
-        delayChildren: 1,
-        staggerChildren: 1,
+        delayChildren: 0.5,
+        staggerChildren: 0.5,
       },
     },
   };
@@ -25,7 +25,7 @@ const Contact = () => {
   return (
     <div className="flex-grow bg-gray-200">
       <motion.main
-        className="container-layout container-layout-lg container-layout-xl mt-20 flex flex-col items-center py-10 xl:mb-10 xl:flex-row"
+        className="container-layout container-layout-lg container-layout-xl mt-20 flex flex-col items-center justify-center py-10 xl:mb-10 xl:flex-row xl:items-start"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -96,7 +96,7 @@ const Contact = () => {
           </motion.div>
         </motion.div>
         <motion.div
-          className="w-full overflow-hidden rounded-lg border-4 border-white shadow-lg xl:w-1/2"
+          className="w-full overflow-hidden rounded-lg border-4 border-white shadow-lg md:w-1/2"
           variants={containerVariants}
         >
           <h3 className="bg-white p-2 pb-2 text-center text-xl font-semibold text-gray-800">
@@ -104,11 +104,10 @@ const Contact = () => {
           </h3>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3641.759884106482!2d120.6996926748433!3d24.10993817487945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693dab3fc97ec9%3A0x50df1b9e2b7c9649!2z56uL5piO6Zu75Zmo6KGMLeWkp-mHjOWGt-awo-e2reS_ruaOqOiWpnzlhrfmsKPkv53ppIp85bCI5qWt5Ya35rCj5L-d6aSKfOWGt-awo-W_q-mAn-e2reS_rnzngYzlhrfnhaR85Ya35rCj5a6J6KOdfOWwiOalreWGt-awo-S_nemkinzmmbrmhaflrrbpm7s!5e0!3m2!1szh-TW!2stw!4v1720441687503!5m2!1szh-TW!2stw"
-            width="100%"
-            height="100%"
+            className="h-[400px] w-full"
             style={{ border: 0 }}
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Google Map of our location"
           ></iframe>
         </motion.div>
