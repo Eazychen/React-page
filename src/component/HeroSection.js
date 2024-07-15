@@ -33,7 +33,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
         style={{
           backgroundImage: `url(${imgUrl})`,
         }}
-      > 
+      >
         <div className="hero-overlay bg-opacity-70"></div>
         <div className="hero-content opacity-80">
           <div className="w-full">
@@ -45,7 +45,7 @@ const AnimatedSection = ({ imgUrl, title, subtitle, content, reverse }) => {
             </motion.h3>
             <motion.p
               variants={animationVariants}
-              className="mb-5 text-center font-raleway text-lg text-red-600 md:text-xl lg:text-2xl"
+              className="mb-5 text-center font-raleway text-lg text-yellow-300 md:text-xl lg:text-2xl"
             >
               {subtitle}
             </motion.p>
